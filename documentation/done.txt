@@ -1,0 +1,10 @@
+crypto package
+paramiko package
+modified /usr/local/pfx/qube/bin/simplecmds/houdini.py script under Qube
+added log out put file field
+need to change the Cmd Template of Required Parameters to include  -v >>%(log_output_file)  too. see houdini_resubmit.png
+download log locally and check for Mantra1 frame 1 for example
+
+need to modify maya script under /usr/local/pfx/qube/api/python/qb/gui/simplecmd.py
+
+
