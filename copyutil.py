@@ -25,7 +25,7 @@ def exists(sftp, path):
             sftp.stat(path)
             return True
         except IOError, e:
-            print 'log not there yet, need to submit the houdin Qube job first'
+            print 'log not there yet, need to submit the Houdini Qube job first'
             return False
 
 def uploadAllFilesToSFTP(mylocalpath, myremotepath, sftp, initflag):
@@ -102,9 +102,14 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
 	# Authenticate
 
-	#password = "12345678"
-	#username = "yioannidis"
-	transport.connect(username = username, password = password)
+	passw = password
+	user = username
+	
+	print '\n*********************\n*********************'
+	print 'username=%s \npassword=%s'%(user,"********")
+	print '*********************\n*********************\n'
+	
+	transport.connect(username = str(unicode(user)), password = str(unicode(passw)))
 
 	
 	# open sftp connection
@@ -232,4 +237,5 @@ if __name__ == "__main__":
     logtoLocalPath= raw_input("Please enter full path of the log file on the locally : ")
     framename = raw_input("Please enter the frame name (excluding any file extensions)")
 
-    copyCallback(username, password, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logFromPath, logToPath, framename)
+    copyCallback(username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename)
+    

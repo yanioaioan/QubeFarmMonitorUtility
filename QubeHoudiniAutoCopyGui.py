@@ -28,10 +28,10 @@ logToPath="/home/yioannidis/Desktop/myHoudiniSceneDir/outputframes/testlog.txt"
 framename="myframe"
 
 
-instrcutionsText="""1) Prepare the scene directory to be copied accross to renderfarm with relatives
-    path to all assets needed (textures etc.)
+instrcutionsText="""1) Prepare the scene directory to be copied accross to renderfarm, with relative
+    paths to all assets needed (textures etc.)
  
-2) Double check the directory does not exist on the renderfarm
+2) Double check that the directory to be copied does not exist on the renderfarm
 
 3) Press "Start Monitoring to start the auto Monitor Utility
 
@@ -39,7 +39,7 @@ instrcutionsText="""1) Prepare the scene directory to be copied accross to rende
 
 5) MAKE SURE that you specify a unique logfile name, 
    based on the frame range you are about to render (..mylog1-100.txt)
-   on the Resubmit dialog filed named 'Log Output File'
+   on the Resubmit dialog filed named 'outputLogFile'
    
 6) Fill in the AutoCopy Form
 
@@ -52,7 +52,7 @@ def exists(path):
         if os.path.isfile(path):
             return True
         else:
-            print 'savedOutForm.txt not there'
+            print 'savedOutForm.txt not there\n'
             return False
 
 class IntructionsWindow(QtGui.QWidget):
