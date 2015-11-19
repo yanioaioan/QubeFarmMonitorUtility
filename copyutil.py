@@ -69,9 +69,6 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
     global t
     t = threading.Timer(10.0, copyCallback, [username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename])
 
-
-    #totalframeNumberToBeRendered=40
-
     paramiko.util.log_to_file('/tmp/paramiko.log')
     '''
     ssh = paramiko.SSHClient()
@@ -111,7 +108,6 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
     transport.connect(username = str(unicode(user)), password = str(unicode(passw)))
 
-
     # open sftp connection
 
     sftp = paramiko.SFTPClient.from_transport(transport)
@@ -134,8 +130,6 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
         files=sftp.listdir(unicode(farmOutputDir))
         sortedfiles = sorted(files)
 
-
-
         print "total number of files to be rendered="+str(len(sortedfiles))
         number_of_files=len(sortedfiles)
 
@@ -153,15 +147,9 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
             filestat=sftp.stat(str(unicode(logfromFarmPath)))
             #sftp.remove(str(unicode(logfromFarmPath)))
             print 'log found on the farm, now time to copy accross'
-            
 
             #download log to monitor
             sftp.get(str(unicode(logfromFarmPath)), str(unicode(logtoLocalPath)))
-
-            #	for line in open(str(unicode(logtoLocalPath))):
-            #		if " frame 1" in line:
-            #			print line
-                    
 
             print 'frameStart=%d'%int(frameStart)
             print 'frameEnd=%d'%int(frameEnd)
@@ -177,39 +165,43 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
                     with open(logtoLocalPath) as fin:
                         for line in fin:
-                            #line = re.findall("*\.tiff*", line) #was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)
+                            '''was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)'''
+                            #line = re.findall("*\.tiff*", line)
 
 
                             line = re.findall('Successfully written image file.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
 
+                            '''Helpers usefull for maintenance
 
                             #if line:
                             #   print "line="+str(line)
+                            '''
 
                             #if line found in the log, means we can safely copy accross
                             if line:
-                                #print 'line='+str(line)+' found'
 
+                                '''Helpers usefull for maintenance
+
+                                #print 'line='+str(line)+' found'
                                 #it will raise an exception of file to copy across if not there
                                 #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
                                 #print i
-
+                                '''
 
                                 for filename in sortedfiles:
+
+                                    '''Helpers usefull for maintenance
+
                                     #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i])
                                     #filename = re.findall('myframe*%s.'%i, filename)
                                     #print filename
-
                                     #print framename
-
-                                    #ld way of doing it
+                                    #old way of doing it
                                     #filename = re.findall("%s\.0*%s\.[a-z]*" % (framename,i), filename)
-
                                     #filename = re.findall(imageFileName[-1] , filename)
+                                    '''
 
                                     imageFileName=line[0].split('/')#split and get the last element, which would be the string
-
-
 
                                     if filename:
 
@@ -218,23 +210,18 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
                                         print "************"
                                         print str(filename)+' found complete..and copied accross'
 
-
-
                                         filepath = str(unicode(farmOutputDir))+str(filename)
                                         localpath = str(unicode(copyAccrossOutputDir))+str(username)+str(filename)
-
-
 
                                         #copy rendered frame accross
                                         sftp.get(filepath, localpath)
                                         # Delete file
                                         sftp.remove(filepath)
 
-                    # it will raise an exception of file to copy across is not there not there
+
+                    #it will raise an exception of file to copy across is not there not there
                     #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
-
                     # Download
-
                     #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i]) #'/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff'
                     #localpath = str(copyAccrossOutputDir)+str(username)+str(sortedfiles[i])
 
