@@ -17,6 +17,9 @@ from PyQt4 import QtGui, QtCore
 #Default attributes to be loaded when there's no savedOutForm.txt
 username="yioannidis"
 password=""
+
+#Houdini related default initialization
+'''
 localSceneDir="/home/yioannidis/Desktop/myHoudiniSceneDir/"
 remoteSceneDir="/home/yioannidis/myHoudiniSceneDir/"
 farmOutputDir="/home/yioannidis/myHoudiniSceneDir/outputframes/"
@@ -26,6 +29,20 @@ frameEnd="15"
 logFromPath="/home/yioannidis/myHoudiniSceneDir/testlog.txt"
 logToPath="/home/yioannidis/Desktop/myHoudiniSceneDir/outputframes/testlog.txt"
 framename="myframe"
+'''
+
+#Maya Vray related default initialization
+
+localSceneDir="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/"
+remoteSceneDir="/home/yioannidis/myMayaSceneDir/"
+farmOutputDir="/home/yioannidis/myMayaSceneDir/textures/camera1/"
+copyAccrossOutputDir="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/camera1/"
+frameStart="1"
+frameEnd="100"
+logFromPath="/home/yioannidis/myMayaSceneDir/logNew.txt"
+logToPath="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/logNew.txt"
+framename="test"
+
 
 
 instrcutionsText="""1) Prepare the scene directory to be copied accross to renderfarm, with relative
@@ -115,7 +132,7 @@ class Util(QtGui.QWidget):
 		
 		self.lbl3 = QtGui.QLabel('Specify local Scece directory to copy to renderfarm', self)
 		self.lbl3.move(10, 130)                
-		self.qle3 = QtGui.QLineEdit(self)		
+		self.qle3 = QtGui.QLineEdit(self)
 		self.qle3.setText(localSceneDir)
 		self.qle3.setFixedWidth(550)
 		self.qle3.move(10, 150)
@@ -128,7 +145,7 @@ class Util(QtGui.QWidget):
 		self.qle4.move(10, 210)
 
 		
-		self.lbl5 = QtGui.QLabel('Copy Rendered Frames From.. (renderfarm directory)',self)        
+		self.lbl5 = QtGui.QLabel('Copy Rendered Frames From.. (renderfarm directory)',self)
 		self.lbl5.move(10, 250)       
 		self.qle5 = QtGui.QLineEdit(self)
 		self.qle5.setText(farmOutputDir)

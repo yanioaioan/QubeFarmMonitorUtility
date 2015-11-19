@@ -62,90 +62,98 @@ def uploadAllFilesToSFTP(mylocalpath, myremotepath, sftp, initflag):
                 sftp.put(file, os.path.join(myremotepath, base))
                 
 def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename):
-	
-	global prevFileSize, prevAccessTime, currentFileSize, currentAccessTime, prevDict, dictionary
-	
-	#Afer 60 secs re-execute copyCallback
-	global t
-	t = threading.Timer(10.0, copyCallback, [username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename])
-	
-	
-	#totalframeNumberToBeRendered=40
-	
-	paramiko.util.log_to_file('/tmp/paramiko.log')
-	'''
-	ssh = paramiko.SSHClient()
-	ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	try:
-			host='W10905'
-			
-			ssh.connect(host, username='yioannidis', password='12345678')
-	except paramiko.SSHException:
-			print "Connection Failed"
-			quit()
-	 
-	stdin,stdout,stderr = ssh.exec_command("echo Connected")
-	 
-	for line in stdout.readlines():
-			print line.strip()
-			
 
-	#print(os.path.isdir("/home/yioannidis/"))
-	#print(os.path.exists("/home/yioannidis/test.txt"))
-	'''
+    global prevFileSize, prevAccessTime, currentFileSize, currentAccessTime, prevDict, dictionary
 
-	# Open a transport
+    #Afer 60 secs re-execute copyCallback
+    global t
+    t = threading.Timer(10.0, copyCallback, [username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename])
 
-	myhost = "tete"
-	port = 22
-	transport = paramiko.Transport((myhost, port))
 
-	# Authenticate
+    #totalframeNumberToBeRendered=40
 
-	passw = password
-	user = username
-	
-	print '\n*********************\n*********************'
-	print 'username=%s \npassword=%s'%(user,"********")
-	print '*********************\n*********************\n'
-	
-	transport.connect(username = str(unicode(user)), password = str(unicode(passw)))
+    paramiko.util.log_to_file('/tmp/paramiko.log')
+    '''
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    try:
+            host='W10905'
 
-	
-	# open sftp connection
+            ssh.connect(host, username='yioannidis', password='12345678')
+    except paramiko.SSHException:
+            print "Connection Failed"
+            quit()
 
-	sftp = paramiko.SFTPClient.from_transport(transport)
-	
-	# Upload files from local folder to renderfarm at first
-	#uploadAllFilesToSFTP("/home/yioannidis/Desktop/myMayaSceneDir/", '/home/yioannidis/myMayaSceneDir/', sftp, True)
-	uploadAllFilesToSFTP(str(unicode(localScene)), str(unicode(remoteScene)), sftp, True)
-	
-	
+    stdin,stdout,stderr = ssh.exec_command("echo Connected")
 
-	if exists(sftp,str(unicode(logfromFarmPath))):
-		#print 'log not there'
+    for line in stdout.readlines():
+            print line.strip()
 
-		# list files' number in the output images directory
-		#directory="/home/yioannidis/"
-		#number_of_files = len([item for item in os.listdir(directory) if os.path.isfile(os.path.join(directory, item))])
 
-		files=sftp.listdir(unicode(farmOutputDir))
-		sortedfiles = sorted(files)
-		
-		print "total number of files to be rendered="+str(len(sortedfiles))
-		number_of_files=len(sortedfiles)
-        
+    #print(os.path.isdir("/home/yioannidis/"))
+    #print(os.path.exists("/home/yioannidis/test.txt"))
+    '''
+
+    # Open a transport
+
+    myhost = "tete"
+    port = 22
+    transport = paramiko.Transport((myhost, port))
+
+    # Authenticate
+
+    passw = password
+    user = username
+
+    print '\n*********************\n*********************'
+    print 'username=%s \npassword=%s'%(user,"********")
+    print '*********************\n*********************\n'
+
+    transport.connect(username = str(unicode(user)), password = str(unicode(passw)))
+
+
+    # open sftp connection
+
+    sftp = paramiko.SFTPClient.from_transport(transport)
+
+    # Upload files from local folder to renderfarm at first
+    #uploadAllFilesToSFTP("/home/yioannidis/Desktop/myMayaSceneDir/", '/home/yioannidis/myMayaSceneDir/', sftp, True)
+    uploadAllFilesToSFTP(str(unicode(localScene)), str(unicode(remoteScene)), sftp, True)
+
+
+    print 'logfromFarmPath='+str(logfromFarmPath)
+
+    if exists(sftp,str(unicode(logfromFarmPath))):
+        #print 'log not there'
+        print 'Log found'
+
+        # list files' number in the output images directory
+        #directory="/home/yioannidis/"
+        #number_of_files = len([item for item in os.listdir(directory) if os.path.isfile(os.path.join(directory, item))])
+
+        files=sftp.listdir(unicode(farmOutputDir))
+        sortedfiles = sorted(files)
+
+
+
+        print "total number of files to be rendered="+str(len(sortedfiles))
+        number_of_files=len(sortedfiles)
+
         #Check if the directory that the rendered frames will be copied accross exist
         if not os.path.exists(copyAccrossOutputDir):
             os.mkdir(copyAccrossOutputDir)
+            print 'creating dir'+str(copyAccrossOutputDir)
+        
 
         copiedFiles = os.listdir(copyAccrossOutputDir)
         print "total number of files copied across="+str(len(copiedFiles))
-
-
+        
         try:
+
             filestat=sftp.stat(str(unicode(logfromFarmPath)))
             #sftp.remove(str(unicode(logfromFarmPath)))
+            print 'log found on the farm, now time to copy accross'
+            
 
             #download log to monitor
             sftp.get(str(unicode(logfromFarmPath)), str(unicode(logtoLocalPath)))
@@ -161,49 +169,76 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
             totalframestocopyaccros= int(frameEnd)-int(frameStart)+1
             print 'totalframestocopyaccros=%d'%totalframestocopyaccros
 
-
-
             if len(copiedFiles)<int(totalframestocopyaccros):
-                for i in range(int(frameStart),int(frameEnd)+1):
+                for i in range(int(frameStart),int(frameEnd)):
                     #print sortedfiles[i]
-                    keyword='\ frame\ %d$'%i
-                    #print keyword
+                    #keyword='\ frame\ %d$'%i
 
-                    
+
                     with open(logtoLocalPath) as fin:
                         for line in fin:
-                            line = re.findall(keyword, line)
+                            #line = re.findall("*\.tiff*", line) #was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)
+
+
+                            line = re.findall('Successfully written image file.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
+
+
+                            #if line:
+                            #   print "line="+str(line)
+
+                            #if line found in the log, means we can safely copy accross
                             if line:
-                                print 'line='+str(line)+' found'
-                                #it will raise an exception of file to copy across is not there not there'''
+                                #print 'line='+str(line)+' found'
+
+                                #it will raise an exception of file to copy across if not there
                                 #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
                                 #print i
-                                
+
+
                                 for filename in sortedfiles:
                                     #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i])
                                     #filename = re.findall('myframe*%s.'%i, filename)
                                     #print filename
-                                    
+
                                     #print framename
-                                    
-                                    filename = re.findall("%s0*%s\.[a-z]*" % (framename,i), filename)
+
+                                    #ld way of doing it
+                                    #filename = re.findall("%s\.0*%s\.[a-z]*" % (framename,i), filename)
+
+                                    #filename = re.findall(imageFileName[-1] , filename)
+
+                                    imageFileName=line[0].split('/')#split and get the last element, which would be the string
+
+
+
                                     if filename:
-                                        print str(filename[0])+' found..and copied'
-                                        filepath = str(unicode(farmOutputDir))+str(filename[0])
-                                        localpath = str(copyAccrossOutputDir)+str(username)+str(filename[0])
-                                        
+
+                                        print "************"
+                                        print str(imageFileName[-1])+' imageFileNameStrippedoutof line regexpred\t<---'+str(line[0])
+                                        print "************"
+                                        print str(filename)+' found complete..and copied accross'
+
+
+
+                                        filepath = str(unicode(farmOutputDir))+str(filename)
+                                        localpath = str(unicode(copyAccrossOutputDir))+str(username)+str(filename)
+
+
+
                                         #copy rendered frame accross
                                         sftp.get(filepath, localpath)
                                         # Delete file
                                         sftp.remove(filepath)
 
-                    # it will raise an exception of file to copy across is not there not there'''
+                    # it will raise an exception of file to copy across is not there not there
                     #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
 
                     # Download
-                    
+
                     #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i]) #'/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff'
                     #localpath = str(copyAccrossOutputDir)+str(username)+str(sortedfiles[i])
+
+
             elif len(copiedFiles)>=int(totalframestocopyaccros):
                 #cancel the timer thread
                 t.cancel()
@@ -211,18 +246,18 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
         except:
             print 'Please submit a Qube job so as for a logfile to be created first'
-            
-
-	sftp.close()
-	transport.close()
 
 
-	#ssh.close()
+    sftp.close()
+    transport.close()
 
-	
-	print(time.ctime())
-	t.start()
-	
+
+    #ssh.close()
+
+
+    print(time.ctime())
+    t.start()
+
 if __name__ == "__main__":
 
     username = raw_input("Please enter username: ")
