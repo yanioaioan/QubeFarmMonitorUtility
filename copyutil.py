@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+from distutils.command.check import check
 
 import paramiko, threading, os, copy
 import time
@@ -25,7 +25,7 @@ def exists(sftp, path):
             sftp.stat(path)
             return True
         except IOError, e:
-            print 'log not there yet, need to submit the Houdini Qube job first'
+            print 'log not there yet, need to submit the Qube job first'
             return False
 
 def uploadAllFilesToSFTP(mylocalpath, myremotepath, sftp, initflag):
@@ -163,60 +163,68 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
                     #keyword='\ frame\ %d$'%i
 
 
-                    with open(logtoLocalPath) as fin:
-                        for line in fin:
-                            '''was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)'''
-                            #line = re.findall("*\.tiff*", line)
+                    print "checkIfImageStillOnTheFarm="+str(sortedfiles[i])
+
+                    if sortedfiles[i]:
+
+                        with open(logtoLocalPath) as fin:
+                            for line in fin:
+                                '''was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)'''
+                                #line = re.findall("*\.tiff*", line)
 
 
-                            line = re.findall('Successfully written image file.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
-
-                            '''Helpers usefull for maintenance
-
-                            #if line:
-                            #   print "line="+str(line)
-                            '''
-
-                            #if line found in the log, means we can safely copy accross
-                            if line:
+                                line = re.findall('Successfully written image file.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
 
                                 '''Helpers usefull for maintenance
 
-                                #print 'line='+str(line)+' found'
-                                #it will raise an exception of file to copy across if not there
-                                #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
-                                #print i
+                                #if line:
+                                #   print "line="+str(line)
                                 '''
 
-                                for filename in sortedfiles:
+                                #if line found in the log, means we can safely copy accross
+                                if line:
 
                                     '''Helpers usefull for maintenance
 
-                                    #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i])
-                                    #filename = re.findall('myframe*%s.'%i, filename)
-                                    #print filename
-                                    #print framename
-                                    #old way of doing it
-                                    #filename = re.findall("%s\.0*%s\.[a-z]*" % (framename,i), filename)
-                                    #filename = re.findall(imageFileName[-1] , filename)
+                                    #print 'line='+str(line)+' found'
+                                    #it will raise an exception of file to copy across if not there
+                                    #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
+                                    #print i
                                     '''
 
-                                    imageFileName=line[0].split('/')#split and get the last element, which would be the string
+                                    for filename in sortedfiles:
 
-                                    if filename:
+                                        '''Helpers usefull for maintenance
 
-                                        print "************"
-                                        print str(imageFileName[-1])+' imageFileNameStrippedoutof line regexpred\t<---'+str(line[0])
-                                        print "************"
-                                        print str(filename)+' found complete..and copied accross'
+                                        #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i])
+                                        #filename = re.findall('myframe*%s.'%i, filename)
+                                        #print filename
+                                        #print framename
+                                        #old way of doing it
+                                        #filename = re.findall("%s\.0*%s\.[a-z]*" % (framename,i), filename)
+                                        #filename = re.findall(imageFileName[-1] , filename)
+                                        '''
 
-                                        filepath = str(unicode(farmOutputDir))+str(filename)
-                                        localpath = str(unicode(copyAccrossOutputDir))+str(username)+str(filename)
+                                        imageFileName=line[0].split('/')#split and get the last element, which would be the string
 
-                                        #copy rendered frame accross
-                                        sftp.get(filepath, localpath)
-                                        # Delete file
-                                        sftp.remove(filepath)
+                                        if filename:
+
+                                            print "************"
+                                            print str(imageFileName[-1])+' imageFileNameStrippedoutof line regexpred\t<---'+str(line[0])
+                                            print "************"
+                                            print str(filename)+' found complete..and copied accross'
+
+                                            filepath = str(unicode(farmOutputDir))+str(filename)
+                                            localpath = str(unicode(copyAccrossOutputDir))+str(username)+str("_")+str(filename)
+
+                                            try:
+                                                #copy rendered frame accross
+                                                sftp.get(filepath, localpath)
+
+                                                # Delete file if sftp.get() has successfully finished copying
+                                                sftp.remove(filepath)
+                                            except:
+                                                print "Copying frame %s failed for some reason, so we didn't remove it from the farm's home directory"
 
 
                     #it will raise an exception of file to copy across is not there not there
@@ -230,6 +238,7 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
                 #cancel the timer thread
                 t.cancel()
                 print 'All frames have been succesfully finished - copied accross'
+                exit()
 
         except:
             print 'Please submit a Qube job so as for a logfile to be created first'
@@ -246,7 +255,8 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
     t.start()
 
 if __name__ == "__main__":
-
+    '''
+    #If needed to run from terminal with user interaction
     username = raw_input("Please enter username: ")
     password = getpass.getpass()#raw_input("Please enter password: ")
     localScene = raw_input("Please enter full path to the local Scece directory to copy to renderfarm : ")#/home/yioannidis/Desktop/myHoudiniSceneDir/
@@ -258,6 +268,22 @@ if __name__ == "__main__":
     logfromFarmPath = raw_input("Please enter full path of the log file on the farm : ")
     logtoLocalPath= raw_input("Please enter full path of the log file on the locally : ")
     framename = raw_input("Please enter the frame name (excluding any file extensions)")
+    '''
+
+    #If needed to run directly
+    '''
+    username ="yioannidis"
+    password = "**********"
+    localScene="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/"
+    remoteScene="/home/yioannidis/myMayaSceneDir/"
+    farmOutputDir="/home/yioannidis/myMayaSceneDir/textures/perspShape/"
+    copyAccrossOutputDir="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/perspShape/"
+    frameStart="1"
+    frameEnd="100"
+    logfromFarmPath="/home/yioannidis/myMayaSceneDir/textures/logNew.txt"
+    logtoLocalPath="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/logNew.txt"
+    framename="test"
+    '''
 
     copyCallback(username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename)
     
