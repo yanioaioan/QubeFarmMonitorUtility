@@ -6,8 +6,8 @@ The script transfers a ready scene folder to the renderfarm, and sits there and 
 The user resubmits a new job and specifies a unique log filename remote path (in ex. /home/username/myhoudiniscene/logframes1-100.txt) for this render
 The script monitors the whole process with regards to the finished rendered frames and copies them accross. The script runs on a interval but the copying process
 is triggered by the renderers fired on Qube farm whenever applicable.
-The script afterall, can be used to facilitate the existing renderfarm account 10 quota restriction. 
-Finished frames can either be copied back to home or tranfer drives dir or using ssh one could fire Qube to many computer on the network having the finished frames being copied accross
+The script afterall, can be used to facilitate the existing renderfarm account 10 GIG quota restriction.
+Finished frames can either be copied back to home or tranfer drives dir or using ssh one could fire Qube to many computers on the network having the finished frames being copied accross
 to the corresponding /transfer drives when they are finished.
 '''
 

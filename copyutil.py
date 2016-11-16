@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 from distutils.command.check import check
 
-import paramiko, threading, os, copy
+import threading, os, copy
+#import paramiko, threading, os, copy
 import time
 import getpass
 import re
@@ -69,7 +70,8 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
     global t
     t = threading.Timer(10.0, copyCallback, [username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename])
 
-    paramiko.util.log_to_file('/tmp/paramiko.log')
+    #####paramiko.util.log_to_file('/tmp/paramiko.log')
+
     '''
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -95,7 +97,7 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
     myhost = "tete"
     port = 22
-    transport = paramiko.Transport((myhost, port))
+    #####transport = paramiko.Transport((myhost, port))
 
     # Authenticate
 
@@ -106,15 +108,24 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
     print 'username=%s \npassword=%s'%(user,"********")
     print '*********************\n*********************\n'
 
-    transport.connect(username = str(unicode(user)), password = str(unicode(passw)))
+    #####transport.connect(username = str(unicode(user)), password = str(unicode(passw)))
 
     # open sftp connection
 
-    sftp = paramiko.SFTPClient.from_transport(transport)
+    #####sftp = paramiko.SFTPClient.from_transport(transport)
+
+    #os.system("sftp "+username+"@tete")
+
 
     # Upload files from local folder to renderfarm at first
     #uploadAllFilesToSFTP("/home/yioannidis/Desktop/myMayaSceneDir/", '/home/yioannidis/myMayaSceneDir/', sftp, True)
-    uploadAllFilesToSFTP(str(unicode(localScene)), str(unicode(remoteScene)), sftp, True)
+
+    import subprocess
+
+    #subprocess.call('python ', shell=True)
+    subprocess.call(['python', 'testSubProcessSftpScritp.py', str(unicode(localScene)), str(unicode(remoteScene)), "sftp", "True" , str(username)])
+
+    #uploadAllFilesToSFTP(str(unicode(localScene)), str(unicode(remoteScene)), sftp, True)
 
 
     print 'logfromFarmPath='+str(logfromFarmPath)
@@ -271,7 +282,7 @@ if __name__ == "__main__":
     '''
 
     #If needed to run directly
-    '''
+
     username ="yioannidis"
     password = "**********"
     localScene="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/"
@@ -283,7 +294,7 @@ if __name__ == "__main__":
     logfromFarmPath="/home/yioannidis/myMayaSceneDir/textures/logNew.txt"
     logtoLocalPath="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/logNew.txt"
     framename="test"
-    '''
+
 
     copyCallback(username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename)
     
