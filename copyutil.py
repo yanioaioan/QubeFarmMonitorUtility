@@ -132,10 +132,14 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
     #if log exists
     #####if exists(sftp,str(unicode(logfromFarmPath))):
-    subprocess.call("ls",shell=True)#\"sftp yioannidis@tete\"\)
+    subprocess.call("sftp yioannidis@tete <<< get testSim_backup/logNew.txt ./ ",shell=True)
     return
+    #<<< ls testSim_backup/logNew.txt && get testSim_backup/logNew.txt
+
+
 
     log=os.stat("logNew.txt")
+    return
     #if log not empty
     if log:
         #print 'log not there'
