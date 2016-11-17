@@ -123,16 +123,24 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
     import subprocess
 
     #subprocess.call('python ', shell=True)
-    subprocess.call(['python', 'testSubProcessSftpScritp.py', str(unicode(localScene)), str(unicode(remoteScene)), "sftp", "True" , str(username)])
+    #subprocess.call(['python', 'uploadToSftp.py', str(unicode(localScene)), str(unicode(remoteScene)), "sftp", "True" , str(username)])
 
     #uploadAllFilesToSFTP(str(unicode(localScene)), str(unicode(remoteScene)), sftp, True)
 
 
     print 'logfromFarmPath='+str(logfromFarmPath)
 
-    if exists(sftp,str(unicode(logfromFarmPath))):
+    #if log exists
+    #####if exists(sftp,str(unicode(logfromFarmPath))):
+    subprocess.call("ls",shell=True)#\"sftp yioannidis@tete\"\)
+    return
+
+    log=os.stat("logNew.txt")
+    #if log not empty
+    if log:
         #print 'log not there'
         print 'Log found'
+        return
 
         # list files' number in the output images directory
         #directory="/home/yioannidis/"
@@ -285,6 +293,7 @@ if __name__ == "__main__":
 
     username ="yioannidis"
     password = "**********"
+    '''
     localScene="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/"
     remoteScene="/home/yioannidis/myMayaSceneDir/"
     farmOutputDir="/home/yioannidis/myMayaSceneDir/textures/perspShape/"
@@ -294,6 +303,19 @@ if __name__ == "__main__":
     logfromFarmPath="/home/yioannidis/myMayaSceneDir/textures/logNew.txt"
     logtoLocalPath="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/logNew.txt"
     framename="test"
+    '''
+
+
+    localScene="/home/yioannidis/Desktop/QUBE/testSim/"
+    remoteScene="/home/yioannidis/testSim/"
+    farmOutputDir="/home/yioannidis/testSim/render/"
+    copyAccrossOutputDir="/home/yioannidis/Desktop/QUBE/testSim/render/"
+    frameStart="1"
+    frameEnd="25"
+    logfromFarmPath="/home/yioannidis/testSim/logNew.txt"
+    logtoLocalPath="/home/yioannidis/Desktop/QUBE/testSim/logNew.txt"
+    framename="test_"
+
 
 
     copyCallback(username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename)
