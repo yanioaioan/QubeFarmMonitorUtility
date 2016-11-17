@@ -132,26 +132,33 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
     #if log exists
     #####if exists(sftp,str(unicode(logfromFarmPath))):
-    subprocess.call("sftp yioannidis@tete <<< get testSim_backup/logNew.txt ./ ",shell=True)
-    return
-    #<<< ls testSim_backup/logNew.txt && get testSim_backup/logNew.txt
+    subprocess.call("sftp yioannidis@tete <<< $'get "+"testSim/logNew.txt ./ ""'",shell=True)
+    #os.system("sftp "+"yioannidis"+"@tete <<< $'mkdir "+"created""'")
+
+
+    #<<< ls testSim/logNew.txt && get testSim/logNew.txt
 
 
 
     log=os.stat("logNew.txt")
-    return
+
     #if log not empty
     if log:
         #print 'log not there'
         print 'Log found'
-        return
+        print log
+
 
         # list files' number in the output images directory
         #directory="/home/yioannidis/"
         #number_of_files = len([item for item in os.listdir(directory) if os.path.isfile(os.path.join(directory, item))])
 
-        files=sftp.listdir(unicode(farmOutputDir))
-        sortedfiles = sorted(files)
+        #####files=sftp.listdir(unicode(farmOutputDir))
+        files=subprocess.call("sftp yioannidis@tete <<< $'ls "+str(farmOutputDir)+"'",shell=True)
+        print "files="
+        print files
+        return
+        #sortedfiles = sorted(files)
 
         print "total number of files to be rendered="+str(len(sortedfiles))
         number_of_files=len(sortedfiles)
@@ -161,7 +168,7 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
             os.mkdir(copyAccrossOutputDir)
             print 'creating dir'+str(copyAccrossOutputDir)
         
-
+        #list all file copied accross locally so far
         copiedFiles = os.listdir(copyAccrossOutputDir)
         print "total number of files copied across="+str(len(copiedFiles))
         
