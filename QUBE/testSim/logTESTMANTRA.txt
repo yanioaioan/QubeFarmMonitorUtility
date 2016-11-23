@@ -1,0 +1,2025 @@
+[13:09:21] Loading IFD from /render/yioannidis/testSim/savedifds/test_0001.ifd
+[13:09:21] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:21] Registering procedural 'alembic': <built-in>
+[13:09:21] Registering procedural 'packed': <built-in>
+[13:09:21] Registering procedural 'sprite': <built-in>
+[13:09:21] Registering procedural 'image3d': <built-in>
+[13:09:21] Registering procedural 'file': <built-in>
+[13:09:21] Registering procedural 'fur': <built-in>
+[13:09:21] Registering procedural 'program': <built-in>
+[13:09:21] Registering procedural 'image3dvolume': <built-in>
+[13:09:21] Registering procedural 'vexvolume': <built-in>
+[13:09:21] Registering procedural 'ptinstance': <built-in>
+[13:09:21] Registering procedural 'ptreplicate': <built-in>
+[13:09:21] Registering procedural 'agent': <built-in>
+[13:09:22] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:22] User defined global attribute 'global:fps' 'real'[1]
+[13:09:22]   reading geometry from stdin
+[13:09:22] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:22]   reading geometry from stdin
+[13:09:22] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:22] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:22] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:22] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:22] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:22] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:22] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:22] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:22] Generating Image: /render/yioannidis/testSim/render/test_0001.exr (720x576)
+[13:09:22]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:22]     SampleFilter: alpha
+[13:09:22]     PixelFilter:  gaussian -w 2
+[13:09:22]     VEX Type:     vector4
+[13:09:22]     Gamma:        1
+[13:09:22]     Dither:       0.5
+[13:09:22]     Gain:         1
+[13:09:22]     White point:  1
+[13:09:22] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0001.exr.mantra_checkpoint
+[13:09:22] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:22] User defined global attribute 'global:fps' 'real'[1]
+[13:09:22] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0001.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.47
+Total Wall Clock Time: 0:00:00.47
+       Total CPU Time: 0:00:01.01
+ System CPU Time Only: 0:00:00.50
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292337	  flts: 0
+    # swaps   : 0
+    blocks in : 56	   out: 40
+    switch ctx: 1943	  ictx: 54
+[13:09:22] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:22] 
+[13:09:22] Thread Count: 20
+[13:09:22] Loading IFD from /render/yioannidis/testSim/savedifds/test_0002.ifd
+[13:09:22] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:22] Registering procedural 'alembic': <built-in>
+[13:09:22] Registering procedural 'packed': <built-in>
+[13:09:22] Registering procedural 'sprite': <built-in>
+[13:09:22] Registering procedural 'image3d': <built-in>
+[13:09:22] Registering procedural 'file': <built-in>
+[13:09:22] Registering procedural 'fur': <built-in>
+[13:09:22] Registering procedural 'program': <built-in>
+[13:09:22] Registering procedural 'image3dvolume': <built-in>
+[13:09:22] Registering procedural 'vexvolume': <built-in>
+[13:09:22] Registering procedural 'ptinstance': <built-in>
+[13:09:22] Registering procedural 'ptreplicate': <built-in>
+[13:09:22] Registering procedural 'agent': <built-in>
+[13:09:22] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:23] User defined global attribute 'global:fps' 'real'[1]
+[13:09:23]   reading geometry from stdin
+[13:09:23] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:23]   reading geometry from stdin
+[13:09:23] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:23] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:23] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:23] Generating Image: /render/yioannidis/testSim/render/test_0002.exr (720x576)
+[13:09:23]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:23]     SampleFilter: alpha
+[13:09:23]     PixelFilter:  gaussian -w 2
+[13:09:23]     VEX Type:     vector4
+[13:09:23]     Gamma:        1
+[13:09:23]     Dither:       0.5
+[13:09:23]     Gain:         1
+[13:09:23]     White point:  1
+[13:09:23] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0002.exr.mantra_checkpoint
+[13:09:23] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:23] User defined global attribute 'global:fps' 'real'[1]
+[13:09:23] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0002.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.42
+Total Wall Clock Time: 0:00:00.42
+       Total CPU Time: 0:00:01.01
+ System CPU Time Only: 0:00:00.52
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292355	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 32
+    switch ctx: 1638	  ictx: 24
+[13:09:23] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:23] 
+[13:09:23] Thread Count: 20
+[13:09:23] Loading IFD from /render/yioannidis/testSim/savedifds/test_0003.ifd
+[13:09:23] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:23] Registering procedural 'alembic': <built-in>
+[13:09:23] Registering procedural 'packed': <built-in>
+[13:09:23] Registering procedural 'sprite': <built-in>
+[13:09:23] Registering procedural 'image3d': <built-in>
+[13:09:23] Registering procedural 'file': <built-in>
+[13:09:23] Registering procedural 'fur': <built-in>
+[13:09:23] Registering procedural 'program': <built-in>
+[13:09:23] Registering procedural 'image3dvolume': <built-in>
+[13:09:23] Registering procedural 'vexvolume': <built-in>
+[13:09:23] Registering procedural 'ptinstance': <built-in>
+[13:09:23] Registering procedural 'ptreplicate': <built-in>
+[13:09:23] Registering procedural 'agent': <built-in>
+[13:09:23] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:23] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:23] User defined global attribute 'global:fps' 'real'[1]
+[13:09:23]   reading geometry from stdin
+[13:09:23] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:23]   reading geometry from stdin
+[13:09:23] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:23] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:23] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:23] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:23] Generating Image: /render/yioannidis/testSim/render/test_0003.exr (720x576)
+[13:09:23]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:23]     SampleFilter: alpha
+[13:09:23]     PixelFilter:  gaussian -w 2
+[13:09:23]     VEX Type:     vector4
+[13:09:23]     Gamma:        1
+[13:09:23]     Dither:       0.5
+[13:09:23]     Gain:         1
+[13:09:23]     White point:  1
+[13:09:23] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0003.exr.mantra_checkpoint
+[13:09:23] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:23] User defined global attribute 'global:fps' 'real'[1]
+[13:09:23] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0003.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.41
+Total Wall Clock Time: 0:00:00.41
+       Total CPU Time: 0:00:01.03
+ System CPU Time Only: 0:00:00.51
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292455	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 40
+    switch ctx: 1639	  ictx: 85
+[13:09:23] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:23] 
+[13:09:23] Thread Count: 20
+[13:09:24] Threading Efficiency: 1951.64%
+[13:09:24] Ray Counts:
+[13:09:24]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:24]       1,861,406 occlusion rays        4.49 rays/pixel
+[13:09:24]       1,838,196 shading rays          4.43 rays/pixel
+[13:09:24]       7,455,446 total rays           17.98 rays/pixel
+[13:09:24] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:24]                       In Cache  Faults    Generated    Item Size
+[13:09:24]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:24] 	1 non-RAT image conversions using 1.46 MB
+[13:09:24] Frame Wall Clock Time: 0:00:01.90
+[13:09:24] Total Wall Clock Time: 0:00:02.37
+[13:09:24]        Total CPU Time: 0:00:09.56
+[13:09:24]  System CPU Time Only: 0:00:00.78
+[13:09:24]     Peak Memory Usage: 676.46 MB
+[13:09:24]     page rclm : 314746	  flts: 0
+    # swaps   : 0
+    blocks in : 768	   out: 12600
+    switch ctx: 6051	  ictx: 2814
+
+[13:09:24] Removed checkpoint file /render/yioannidis/testSim/render/test_0001.exr.mantra_checkpoint upon completion of render.
+[13:09:24] Peak Geometry Objects: 5
+[13:09:24] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:24] Loading IFD from /render/yioannidis/testSim/savedifds/test_0004.ifd
+[13:09:24] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:24] Registering procedural 'alembic': <built-in>
+[13:09:24] Registering procedural 'packed': <built-in>
+[13:09:24] Registering procedural 'sprite': <built-in>
+[13:09:24] Registering procedural 'image3d': <built-in>
+[13:09:24] Registering procedural 'file': <built-in>
+[13:09:24] Registering procedural 'fur': <built-in>
+[13:09:24] Registering procedural 'program': <built-in>
+[13:09:24] Registering procedural 'image3dvolume': <built-in>
+[13:09:24] Registering procedural 'vexvolume': <built-in>
+[13:09:24] Registering procedural 'ptinstance': <built-in>
+[13:09:24] Registering procedural 'ptreplicate': <built-in>
+[13:09:24] Registering procedural 'agent': <built-in>
+[13:09:25] Threading Efficiency: 1957.24%
+[13:09:25] Ray Counts:
+[13:09:25]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:25]       1,861,702 occlusion rays        4.49 rays/pixel
+[13:09:25]       1,838,696 shading rays          4.43 rays/pixel
+[13:09:25]       7,456,242 total rays           17.98 rays/pixel
+[13:09:25] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:25]                       In Cache  Faults    Generated    Item Size
+[13:09:25]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:25] 	1 non-RAT image conversions using 1.46 MB
+[13:09:25] Frame Wall Clock Time: 0:00:02.04
+[13:09:25] Total Wall Clock Time: 0:00:02.46
+[13:09:25]        Total CPU Time: 0:00:09.79
+[13:09:25]  System CPU Time Only: 0:00:00.87
+[13:09:25]     Peak Memory Usage: 696.96 MB
+[13:09:25]     page rclm : 317560	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12576
+    switch ctx: 5933	  ictx: 1394
+
+[13:09:25] Removed checkpoint file /render/yioannidis/testSim/render/test_0002.exr.mantra_checkpoint upon completion of render.
+[13:09:25] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:25] Peak Geometry Objects: 5
+[13:09:25] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:25] User defined global attribute 'global:fps' 'real'[1]
+[13:09:25]   reading geometry from stdin
+[13:09:25] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:25]   reading geometry from stdin
+[13:09:25] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:25] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:25] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:25] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:25] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:25] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:25] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:25] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:25] Generating Image: /render/yioannidis/testSim/render/test_0004.exr (720x576)
+[13:09:25]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:25]     SampleFilter: alpha
+[13:09:25]     PixelFilter:  gaussian -w 2
+[13:09:25]     VEX Type:     vector4
+[13:09:25]     Gamma:        1
+[13:09:25]     Dither:       0.5
+[13:09:25]     Gain:         1
+[13:09:25]     White point:  1
+[13:09:25] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0004.exr.mantra_checkpoint
+[13:09:25] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:25] User defined global attribute 'global:fps' 'real'[1]
+[13:09:25] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0004.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.44
+Total Wall Clock Time: 0:00:00.44
+       Total CPU Time: 0:00:01.08
+ System CPU Time Only: 0:00:00.54
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292442	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 32
+    switch ctx: 1632	  ictx: 85
+[13:09:25] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:25] 
+[13:09:25] Thread Count: 20
+[13:09:25] Threading Efficiency: 1954.92%
+[13:09:25] Ray Counts:
+[13:09:25]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:25]       1,861,590 occlusion rays        4.49 rays/pixel
+[13:09:25]       1,838,224 shading rays          4.43 rays/pixel
+[13:09:25]       7,455,658 total rays           17.98 rays/pixel
+[13:09:25] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:25]                       In Cache  Faults    Generated    Item Size
+[13:09:25]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:25] 	1 non-RAT image conversions using 1.46 MB
+[13:09:25] Frame Wall Clock Time: 0:00:02.11
+[13:09:25] Total Wall Clock Time: 0:00:02.52
+[13:09:25]        Total CPU Time: 0:00:09.84
+[13:09:25]  System CPU Time Only: 0:00:00.81
+[13:09:25]     Peak Memory Usage: 688.96 MB
+[13:09:25]     page rclm : 315562	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12600
+    switch ctx: 6251	  ictx: 7300
+
+[13:09:25] Removed checkpoint file /render/yioannidis/testSim/render/test_0003.exr.mantra_checkpoint upon completion of render.
+[13:09:25] Peak Geometry Objects: 5
+[13:09:26] Loading IFD from /render/yioannidis/testSim/savedifds/test_0006.ifd
+[13:09:26] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:26] Registering procedural 'alembic': <built-in>
+[13:09:26] Registering procedural 'packed': <built-in>
+[13:09:26] Registering procedural 'sprite': <built-in>
+[13:09:26] Registering procedural 'image3d': <built-in>
+[13:09:26] Registering procedural 'file': <built-in>
+[13:09:26] Registering procedural 'fur': <built-in>
+[13:09:26] Registering procedural 'program': <built-in>
+[13:09:26] Registering procedural 'image3dvolume': <built-in>
+[13:09:26] Registering procedural 'vexvolume': <built-in>
+[13:09:26] Registering procedural 'ptinstance': <built-in>
+[13:09:26] Registering procedural 'ptreplicate': <built-in>
+[13:09:26] Registering procedural 'agent': <built-in>
+[13:09:26] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:26] User defined global attribute 'global:fps' 'real'[1]
+[13:09:26]   reading geometry from stdin
+[13:09:26] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:26]   reading geometry from stdin
+[13:09:26] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:26] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:26] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:26] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:26] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:26] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:26] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:26] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:26] Generating Image: /render/yioannidis/testSim/render/test_0006.exr (720x576)
+[13:09:26]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:26]     SampleFilter: alpha
+[13:09:26]     PixelFilter:  gaussian -w 2
+[13:09:26]     VEX Type:     vector4
+[13:09:26]     Gamma:        1
+[13:09:26]     Dither:       0.5
+[13:09:26]     Gain:         1
+[13:09:26]     White point:  1
+[13:09:26] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0006.exr.mantra_checkpoint
+[13:09:26] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:26] User defined global attribute 'global:fps' 'real'[1]
+[13:09:26] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0006.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.41
+Total Wall Clock Time: 0:00:00.41
+       Total CPU Time: 0:00:01.03
+ System CPU Time Only: 0:00:00.53
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292429	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 32
+    switch ctx: 1642	  ictx: 46
+[13:09:26] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:26] 
+[13:09:26] Thread Count: 20
+[13:09:26] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:26] Loading IFD from /render/yioannidis/testSim/savedifds/test_0007.ifd
+[13:09:26] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:26] Registering procedural 'alembic': <built-in>
+[13:09:26] Registering procedural 'packed': <built-in>
+[13:09:26] Registering procedural 'sprite': <built-in>
+[13:09:26] Registering procedural 'image3d': <built-in>
+[13:09:26] Registering procedural 'file': <built-in>
+[13:09:26] Registering procedural 'fur': <built-in>
+[13:09:26] Registering procedural 'program': <built-in>
+[13:09:26] Registering procedural 'image3dvolume': <built-in>
+[13:09:26] Registering procedural 'vexvolume': <built-in>
+[13:09:26] Registering procedural 'ptinstance': <built-in>
+[13:09:26] Registering procedural 'ptreplicate': <built-in>
+[13:09:26] Registering procedural 'agent': <built-in>
+[13:09:27] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:27] User defined global attribute 'global:fps' 'real'[1]
+[13:09:27]   reading geometry from stdin
+[13:09:27] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:27]   reading geometry from stdin
+[13:09:27] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:27] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:27] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:27] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:27] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:27] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:27] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:27] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:27] Generating Image: /render/yioannidis/testSim/render/test_0007.exr (720x576)
+[13:09:27]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:27]     SampleFilter: alpha
+[13:09:27]     PixelFilter:  gaussian -w 2
+[13:09:27]     VEX Type:     vector4
+[13:09:27]     Gamma:        1
+[13:09:27]     Dither:       0.5
+[13:09:27]     Gain:         1
+[13:09:27]     White point:  1
+[13:09:27] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0007.exr.mantra_checkpoint
+[13:09:27] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:27] User defined global attribute 'global:fps' 'real'[1]
+[13:09:27] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0007.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.45
+Total Wall Clock Time: 0:00:00.45
+       Total CPU Time: 0:00:01.06
+ System CPU Time Only: 0:00:00.52
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292363	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 32
+    switch ctx: 1636	  ictx: 64
+[13:09:27] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:27] 
+[13:09:27] Threading Efficiency: 1952.70%
+[13:09:27] Ray Counts:
+[13:09:27]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:27]       1,858,492 occlusion rays        4.48 rays/pixel
+[13:09:27]       1,834,962 shading rays          4.42 rays/pixel
+[13:09:27]       7,449,298 total rays           17.96 rays/pixel
+[13:09:27] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:27]                       In Cache  Faults    Generated    Item Size
+[13:09:27]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:27] 	1 non-RAT image conversions using 1.46 MB
+[13:09:27] Frame Wall Clock Time: 0:00:01.98
+[13:09:27] Total Wall Clock Time: 0:00:02.42
+[13:09:27]        Total CPU Time: 0:00:09.77
+[13:09:27]  System CPU Time Only: 0:00:00.92
+[13:09:27]     Peak Memory Usage: 676.46 MB
+[13:09:27] Thread Count: 20
+[13:09:27]     page rclm : 315719	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12592
+    switch ctx: 6238	  ictx: 2480
+
+[13:09:27] Removed checkpoint file /render/yioannidis/testSim/render/test_0004.exr.mantra_checkpoint upon completion of render.
+[13:09:27] Peak Geometry Objects: 5
+[13:09:28] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:28] Threading Efficiency: 1945.53%
+[13:09:28] Ray Counts:
+[13:09:28]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:28]       1,856,988 occlusion rays        4.48 rays/pixel
+[13:09:28]       1,831,892 shading rays          4.42 rays/pixel
+[13:09:28]       7,444,724 total rays           17.95 rays/pixel
+[13:09:28] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:28]                       In Cache  Faults    Generated    Item Size
+[13:09:28]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:28] 	1 non-RAT image conversions using 1.46 MB
+[13:09:28] Frame Wall Clock Time: 0:00:01.98
+[13:09:28] Total Wall Clock Time: 0:00:02.39
+[13:09:28]        Total CPU Time: 0:00:09.77
+[13:09:28]  System CPU Time Only: 0:00:00.84
+[13:09:28]     Peak Memory Usage: 672.46 MB
+[13:09:28]     page rclm : 317440	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12600
+    switch ctx: 6114	  ictx: 1887
+
+[13:09:28] Removed checkpoint file /render/yioannidis/testSim/render/test_0006.exr.mantra_checkpoint upon completion of render.
+[13:09:28] Peak Geometry Objects: 5
+[13:09:28] Loading IFD from /render/yioannidis/testSim/savedifds/test_0010.ifd
+[13:09:28] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:28] Registering procedural 'alembic': <built-in>
+[13:09:28] Registering procedural 'packed': <built-in>
+[13:09:28] Registering procedural 'sprite': <built-in>
+[13:09:28] Registering procedural 'image3d': <built-in>
+[13:09:28] Registering procedural 'file': <built-in>
+[13:09:28] Registering procedural 'fur': <built-in>
+[13:09:28] Registering procedural 'program': <built-in>
+[13:09:28] Registering procedural 'image3dvolume': <built-in>
+[13:09:28] Registering procedural 'vexvolume': <built-in>
+[13:09:28] Registering procedural 'ptinstance': <built-in>
+[13:09:28] Registering procedural 'ptreplicate': <built-in>
+[13:09:28] Registering procedural 'agent': <built-in>
+[13:09:29] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:29] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:29] User defined global attribute 'global:fps' 'real'[1]
+[13:09:29]   reading geometry from stdin
+[13:09:29] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:29]   reading geometry from stdin
+[13:09:29] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:29] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:29] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:29] Generating Image: /render/yioannidis/testSim/render/test_0010.exr (720x576)
+[13:09:29]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:29]     SampleFilter: alpha
+[13:09:29]     PixelFilter:  gaussian -w 2
+[13:09:29]     VEX Type:     vector4
+[13:09:29]     Gamma:        1
+[13:09:29]     Dither:       0.5
+[13:09:29]     Gain:         1
+[13:09:29]     White point:  1
+[13:09:29] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0010.exr.mantra_checkpoint
+[13:09:29] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:29] User defined global attribute 'global:fps' 'real'[1]
+[13:09:29] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0010.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.46
+Total Wall Clock Time: 0:00:00.46
+       Total CPU Time: 0:00:01.10
+ System CPU Time Only: 0:00:00.55
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292336	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 32
+    switch ctx: 1656	  ictx: 89
+[13:09:29] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:29] 
+[13:09:29] Thread Count: 20
+[13:09:29] Threading Efficiency: 1959.33%
+[13:09:29] Ray Counts:
+[13:09:29]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:29]       1,857,715 occlusion rays        4.48 rays/pixel
+[13:09:29]       1,832,172 shading rays          4.42 rays/pixel
+[13:09:29]       7,445,731 total rays           17.95 rays/pixel
+[13:09:29] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:29]                       In Cache  Faults    Generated    Item Size
+[13:09:29]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:29] 	1 non-RAT image conversions using 1.46 MB
+[13:09:29] Frame Wall Clock Time: 0:00:02.14
+[13:09:29] Total Wall Clock Time: 0:00:02.59
+[13:09:29]        Total CPU Time: 0:00:09.91
+[13:09:29]  System CPU Time Only: 0:00:00.85
+[13:09:29]     Peak Memory Usage: 696.96 MB
+[13:09:29]     page rclm : 317523	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12616
+    switch ctx: 6310	  ictx: 3242
+
+[13:09:29] Loading IFD from /render/yioannidis/testSim/savedifds/test_0011.ifd
+[13:09:29] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:29] Registering procedural 'alembic': <built-in>
+[13:09:29] Removed checkpoint file /render/yioannidis/testSim/render/test_0007.exr.mantra_checkpoint upon completion of render.
+[13:09:29] Registering procedural 'packed': <built-in>
+[13:09:29] Registering procedural 'sprite': <built-in>
+[13:09:29] Registering procedural 'image3d': <built-in>
+[13:09:29] Registering procedural 'file': <built-in>
+[13:09:29] Registering procedural 'fur': <built-in>
+[13:09:29] Registering procedural 'program': <built-in>
+[13:09:29] Registering procedural 'image3dvolume': <built-in>
+[13:09:29] Registering procedural 'vexvolume': <built-in>
+[13:09:29] Registering procedural 'ptinstance': <built-in>
+[13:09:29] Registering procedural 'ptreplicate': <built-in>
+[13:09:29] Registering procedural 'agent': <built-in>
+[13:09:29] Loading IFD from /render/yioannidis/testSim/savedifds/test_0008.ifd
+[13:09:29] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:29] Registering procedural 'alembic': <built-in>
+[13:09:29] Registering procedural 'packed': <built-in>
+[13:09:29] Registering procedural 'sprite': <built-in>
+[13:09:29] Registering procedural 'image3d': <built-in>
+[13:09:29] Registering procedural 'file': <built-in>
+[13:09:29] Registering procedural 'fur': <built-in>
+[13:09:29] Registering procedural 'program': <built-in>
+[13:09:29] Registering procedural 'image3dvolume': <built-in>
+[13:09:29] Registering procedural 'vexvolume': <built-in>
+[13:09:29] Registering procedural 'ptinstance': <built-in>
+[13:09:29] Registering procedural 'ptreplicate': <built-in>
+[13:09:29] Registering procedural 'agent': <built-in>
+[13:09:29] Peak Geometry Objects: 5
+[13:09:29] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:29] User defined global attribute 'global:fps' 'real'[1]
+[13:09:29]   reading geometry from stdin
+[13:09:29] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:29]   reading geometry from stdin
+[13:09:29] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:29] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:29] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:29] Generating Image: /render/yioannidis/testSim/render/test_0011.exr (720x576)
+[13:09:29]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:29]     SampleFilter: alpha
+[13:09:29]     PixelFilter:  gaussian -w 2
+[13:09:29]     VEX Type:     vector4
+[13:09:29]     Gamma:        1
+[13:09:29]     Dither:       0.5
+[13:09:29]     Gain:         1
+[13:09:29]     White point:  1
+[13:09:29] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0011.exr.mantra_checkpoint
+[13:09:29] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:29] User defined global attribute 'global:fps' 'real'[1]
+[13:09:29] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0011.bgeo
+[13:09:29] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:29] Loading IFD from /render/yioannidis/testSim/savedifds/test_0012.ifd
+[13:09:29] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:29] Registering procedural 'alembic': <built-in>
+[13:09:29] Registering procedural 'packed': <built-in>
+[13:09:29] Registering procedural 'sprite': <built-in>
+Load Time: Frame Wall Clock Time: 0:00:00.45
+Total Wall Clock Time: 0:00:00.45
+       Total CPU Time: 0:00:01.10
+ System CPU Time Only: 0:00:00.55
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292380	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1698	  ictx: 189
+[13:09:29] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:29] 
+[13:09:29] Registering procedural 'image3d': <built-in>
+[13:09:29] Registering procedural 'file': <built-in>
+[13:09:29] Registering procedural 'fur': <built-in>
+[13:09:29] Registering procedural 'program': <built-in>
+[13:09:29] Registering procedural 'image3dvolume': <built-in>
+[13:09:29] Registering procedural 'vexvolume': <built-in>
+[13:09:29] Registering procedural 'ptinstance': <built-in>
+[13:09:29] Thread Count: 20
+[13:09:29] Registering procedural 'ptreplicate': <built-in>
+[13:09:29] Registering procedural 'agent': <built-in>
+[13:09:29] User defined global attribute 'global:fps' 'real'[1]
+[13:09:29]   reading geometry from stdin
+[13:09:29] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:29]   reading geometry from stdin
+[13:09:29] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:29] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:29] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:29] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:29] Generating Image: /render/yioannidis/testSim/render/test_0008.exr (720x576)
+[13:09:29]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:29]     SampleFilter: alpha
+[13:09:29]     PixelFilter:  gaussian -w 2
+[13:09:29]     VEX Type:     vector4
+[13:09:29]     Gamma:        1
+[13:09:29]     Dither:       0.5
+[13:09:29]     Gain:         1
+[13:09:29]     White point:  1
+[13:09:29] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0008.exr.mantra_checkpoint
+[13:09:29] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:29] User defined global attribute 'global:fps' 'real'[1]
+[13:09:29] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0008.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.43
+Total Wall Clock Time: 0:00:00.43
+       Total CPU Time: 0:00:01.06
+ System CPU Time Only: 0:00:00.54
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292430	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 56
+    switch ctx: 1693	  ictx: 171
+[13:09:30] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:30] 
+[13:09:30] Thread Count: 20
+[13:09:30] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:30] User defined global attribute 'global:fps' 'real'[1]
+[13:09:30]   reading geometry from stdin
+[13:09:30] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:30]   reading geometry from stdin
+[13:09:30] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:30] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:30] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:30] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:30] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:30] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:30] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:30] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:30] Generating Image: /render/yioannidis/testSim/render/test_0012.exr (720x576)
+[13:09:30]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:30]     SampleFilter: alpha
+[13:09:30]     PixelFilter:  gaussian -w 2
+[13:09:30]     VEX Type:     vector4
+[13:09:30]     Gamma:        1
+[13:09:30]     Dither:       0.5
+[13:09:30]     Gain:         1
+[13:09:30]     White point:  1
+[13:09:30] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0012.exr.mantra_checkpoint
+[13:09:30] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:30] User defined global attribute 'global:fps' 'real'[1]
+[13:09:30] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0012.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.44
+Total Wall Clock Time: 0:00:00.44
+       Total CPU Time: 0:00:01.07
+ System CPU Time Only: 0:00:00.53
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292460	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 56
+    switch ctx: 1658	  ictx: 88
+[13:09:30] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:30] 
+[13:09:30] Thread Count: 20
+[13:09:30] Loading IFD from /render/yioannidis/testSim/savedifds/test_0013.ifd
+[13:09:30] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:30] Registering procedural 'alembic': <built-in>
+[13:09:30] Registering procedural 'packed': <built-in>
+[13:09:30] Registering procedural 'sprite': <built-in>
+[13:09:30] Registering procedural 'image3d': <built-in>
+[13:09:30] Registering procedural 'file': <built-in>
+[13:09:30] Registering procedural 'fur': <built-in>
+[13:09:30] Registering procedural 'program': <built-in>
+[13:09:30] Registering procedural 'image3dvolume': <built-in>
+[13:09:30] Registering procedural 'vexvolume': <built-in>
+[13:09:30] Registering procedural 'ptinstance': <built-in>
+[13:09:30] Registering procedural 'ptreplicate': <built-in>
+[13:09:30] Registering procedural 'agent': <built-in>
+[13:09:31] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:31] User defined global attribute 'global:fps' 'real'[1]
+[13:09:31]   reading geometry from stdin
+[13:09:31] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:31]   reading geometry from stdin
+[13:09:31] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:31] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:31] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:31] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:31] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:31] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:31] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:31] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:31] Generating Image: /render/yioannidis/testSim/render/test_0013.exr (720x576)
+[13:09:31]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:31]     SampleFilter: alpha
+[13:09:31]     PixelFilter:  gaussian -w 2
+[13:09:31]     VEX Type:     vector4
+[13:09:31]     Gamma:        1
+[13:09:31]     Dither:       0.5
+[13:09:31]     Gain:         1
+[13:09:31]     White point:  1
+[13:09:31] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0013.exr.mantra_checkpoint
+[13:09:31] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:31] User defined global attribute 'global:fps' 'real'[1]
+[13:09:31] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0013.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.47
+Total Wall Clock Time: 0:00:00.47
+       Total CPU Time: 0:00:01.06
+ System CPU Time Only: 0:00:00.51
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292459	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 48
+    switch ctx: 1645	  ictx: 26
+[13:09:31] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:31] 
+[13:09:31] Thread Count: 20
+[13:09:31] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:31] Threading Efficiency: 1950.21%
+[13:09:31] Ray Counts:
+[13:09:31]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:31]       1,867,029 occlusion rays        4.50 rays/pixel
+[13:09:31]       1,852,008 shading rays          4.47 rays/pixel
+[13:09:31]       7,474,881 total rays           18.02 rays/pixel
+[13:09:31] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:31]                       In Cache  Faults    Generated    Item Size
+[13:09:31]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:31] 	1 non-RAT image conversions using 1.46 MB
+[13:09:31] Frame Wall Clock Time: 0:00:02.30
+[13:09:31] Total Wall Clock Time: 0:00:02.76
+[13:09:31]        Total CPU Time: 0:00:10.01
+[13:09:31]  System CPU Time Only: 0:00:00.90
+[13:09:31]     Peak Memory Usage: 684.96 MB
+[13:09:31]     page rclm : 316191	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12608
+    switch ctx: 6277	  ictx: 3855
+
+[13:09:31] Removed checkpoint file /render/yioannidis/testSim/render/test_0010.exr.mantra_checkpoint upon completion of render.
+[13:09:31] Peak Geometry Objects: 5
+[13:09:31] Loading IFD from /render/yioannidis/testSim/savedifds/test_0005.ifd
+[13:09:31] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:31] Registering procedural 'alembic': <built-in>
+[13:09:31] Registering procedural 'packed': <built-in>
+[13:09:31] Registering procedural 'sprite': <built-in>
+[13:09:31] Registering procedural 'image3d': <built-in>
+[13:09:31] Registering procedural 'file': <built-in>
+[13:09:31] Registering procedural 'fur': <built-in>
+[13:09:31] Registering procedural 'program': <built-in>
+[13:09:31] Registering procedural 'image3dvolume': <built-in>
+[13:09:31] Registering procedural 'vexvolume': <built-in>
+[13:09:31] Registering procedural 'ptinstance': <built-in>
+[13:09:31] Registering procedural 'ptreplicate': <built-in>
+[13:09:31] Registering procedural 'agent': <built-in>
+[13:09:31] Loading IFD from /render/yioannidis/testSim/savedifds/test_0009.ifd
+[13:09:31] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:31] Registering procedural 'alembic': <built-in>
+[13:09:31] Registering procedural 'packed': <built-in>
+[13:09:31] Registering procedural 'sprite': <built-in>
+[13:09:31] Registering procedural 'image3d': <built-in>
+[13:09:31] Registering procedural 'file': <built-in>
+[13:09:31] Registering procedural 'fur': <built-in>
+[13:09:31] Registering procedural 'program': <built-in>
+[13:09:31] Registering procedural 'image3dvolume': <built-in>
+[13:09:31] Registering procedural 'vexvolume': <built-in>
+[13:09:31] Registering procedural 'ptinstance': <built-in>
+[13:09:31] Registering procedural 'ptreplicate': <built-in>
+[13:09:31] Registering procedural 'agent': <built-in>
+[13:09:32] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:32] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:32] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:32] User defined global attribute 'global:fps' 'real'[1]
+[13:09:32]   reading geometry from stdin
+[13:09:32] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:32]   reading geometry from stdin
+[13:09:32] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:32] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:32] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:32] Generating Image: /render/yioannidis/testSim/render/test_0005.exr (720x576)
+[13:09:32]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:32]     SampleFilter: alpha
+[13:09:32]     PixelFilter:  gaussian -w 2
+[13:09:32]     VEX Type:     vector4
+[13:09:32]     Gamma:        1
+[13:09:32]     Dither:       0.5
+[13:09:32]     Gain:         1
+[13:09:32]     White point:  1
+[13:09:32] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0005.exr.mantra_checkpoint
+[13:09:32] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:32] User defined global attribute 'global:fps' 'real'[1]
+[13:09:32] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0005.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.51
+Total Wall Clock Time: 0:00:00.51
+       Total CPU Time: 0:00:01.13
+ System CPU Time Only: 0:00:00.57
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292338	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 40
+    switch ctx: 1670	  ictx: 279
+[13:09:32] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:32] 
+[13:09:32] Thread Count: 20
+[13:09:32] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:32] User defined global attribute 'global:fps' 'real'[1]
+[13:09:32]   reading geometry from stdin
+[13:09:32] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:32]   reading geometry from stdin
+[13:09:32] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:32] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:32] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:32] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:32] Generating Image: /render/yioannidis/testSim/render/test_0009.exr (720x576)
+[13:09:32]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:32]     SampleFilter: alpha
+[13:09:32]     PixelFilter:  gaussian -w 2
+[13:09:32]     VEX Type:     vector4
+[13:09:32]     Gamma:        1
+[13:09:32]     Dither:       0.5
+[13:09:32]     Gain:         1
+[13:09:32]     White point:  1
+[13:09:32] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0009.exr.mantra_checkpoint
+[13:09:32] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:32] User defined global attribute 'global:fps' 'real'[1]
+[13:09:32] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0009.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.53
+Total Wall Clock Time: 0:00:00.53
+       Total CPU Time: 0:00:01.14
+ System CPU Time Only: 0:00:00.58
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292338	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 32
+    switch ctx: 1672	  ictx: 208
+[13:09:32] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:32] 
+[13:09:32] Thread Count: 20
+[13:09:32] Threading Efficiency: 1918.99%
+[13:09:32] Ray Counts:
+[13:09:32]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:32]       1,858,426 occlusion rays        4.48 rays/pixel
+[13:09:32]       1,832,215 shading rays          4.42 rays/pixel
+[13:09:32]       7,446,485 total rays           17.96 rays/pixel
+[13:09:32] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:32]                       In Cache  Faults    Generated    Item Size
+[13:09:32]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:32] 	1 non-RAT image conversions using 1.46 MB
+[13:09:32] Frame Wall Clock Time: 0:00:02.66
+[13:09:32] Total Wall Clock Time: 0:00:03.09
+[13:09:32]        Total CPU Time: 0:00:10.02
+[13:09:32]  System CPU Time Only: 0:00:00.87
+[13:09:32]     Peak Memory Usage: 688.96 MB
+[13:09:32]     page rclm : 316680	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12648
+    switch ctx: 5210	  ictx: 30903
+
+[13:09:32] Removed checkpoint file /render/yioannidis/testSim/render/test_0008.exr.mantra_checkpoint upon completion of render.
+[13:09:32] Threading Efficiency: 1937.49%
+[13:09:32] Ray Counts:
+[13:09:32]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:32]       1,867,373 occlusion rays        4.50 rays/pixel
+[13:09:32]       1,851,003 shading rays          4.46 rays/pixel
+[13:09:32]       7,474,220 total rays           18.02 rays/pixel
+[13:09:32] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:32]                       In Cache  Faults    Generated    Item Size
+[13:09:32]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:32] 	1 non-RAT image conversions using 1.46 MB
+[13:09:32] Frame Wall Clock Time: 0:00:02.77
+[13:09:32] Total Wall Clock Time: 0:00:03.22
+[13:09:32]        Total CPU Time: 0:00:10.22
+[13:09:32]  System CPU Time Only: 0:00:00.86
+[13:09:32]     Peak Memory Usage: 691.96 MB
+[13:09:32]     page rclm : 315662	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12656
+    switch ctx: 5927	  ictx: 24254
+
+[13:09:32] Removed checkpoint file /render/yioannidis/testSim/render/test_0011.exr.mantra_checkpoint upon completion of render.
+[13:09:32] Peak Geometry Objects: 5
+[13:09:32] Peak Geometry Objects: 5
+[13:09:33] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:33] Threading Efficiency: 1933.67%
+[13:09:33] Ray Counts:
+[13:09:33]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:33]       1,869,864 occlusion rays        4.51 rays/pixel
+[13:09:33]       1,854,109 shading rays          4.47 rays/pixel
+[13:09:33]       7,479,817 total rays           18.04 rays/pixel
+[13:09:33] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:33]                       In Cache  Faults    Generated    Item Size
+[13:09:33]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:33] 	1 non-RAT image conversions using 1.46 MB
+[13:09:33] Frame Wall Clock Time: 0:00:03.06
+[13:09:33] Total Wall Clock Time: 0:00:03.50
+[13:09:33]        Total CPU Time: 0:00:10.48
+[13:09:33]  System CPU Time Only: 0:00:00.92
+[13:09:33]     Peak Memory Usage: 720.96 MB
+[13:09:33]     page rclm : 319929	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12656
+    switch ctx: 4889	  ictx: 28716
+
+[13:09:33] Removed checkpoint file /render/yioannidis/testSim/render/test_0012.exr.mantra_checkpoint upon completion of render.
+[13:09:33] Loading IFD from /render/yioannidis/testSim/savedifds/test_0014.ifd
+[13:09:33] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:33] Registering procedural 'alembic': <built-in>
+[13:09:33] Registering procedural 'packed': <built-in>
+[13:09:33] Registering procedural 'sprite': <built-in>
+[13:09:33] Registering procedural 'image3d': <built-in>
+[13:09:33] Registering procedural 'file': <built-in>
+[13:09:33] Registering procedural 'fur': <built-in>
+[13:09:33] Registering procedural 'program': <built-in>
+[13:09:33] Registering procedural 'image3dvolume': <built-in>
+[13:09:33] Registering procedural 'vexvolume': <built-in>
+[13:09:33] Registering procedural 'ptinstance': <built-in>
+[13:09:33] Registering procedural 'ptreplicate': <built-in>
+[13:09:33] Registering procedural 'agent': <built-in>
+[13:09:33] Peak Geometry Objects: 5
+[13:09:33] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:33] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:33] User defined global attribute 'global:fps' 'real'[1]
+[13:09:33]   reading geometry from stdin
+[13:09:33] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:33]   reading geometry from stdin
+[13:09:33] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:33] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:33] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:33] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:33] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:33] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:33] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:33] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:33] Generating Image: /render/yioannidis/testSim/render/test_0014.exr (720x576)
+[13:09:33]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:33]     SampleFilter: alpha
+[13:09:33]     PixelFilter:  gaussian -w 2
+[13:09:33]     VEX Type:     vector4
+[13:09:33]     Gamma:        1
+[13:09:33]     Dither:       0.5
+[13:09:33]     Gain:         1
+[13:09:33]     White point:  1
+[13:09:33] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0014.exr.mantra_checkpoint
+[13:09:33] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:33] User defined global attribute 'global:fps' 'real'[1]
+[13:09:33] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0014.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.47
+Total Wall Clock Time: 0:00:00.47
+       Total CPU Time: 0:00:01.12
+ System CPU Time Only: 0:00:00.55
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292458	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1657	  ictx: 193
+[13:09:33] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:33] 
+[13:09:33] Thread Count: 20
+[13:09:34] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:34] Threading Efficiency: 1805.49%
+[13:09:34] Ray Counts:
+[13:09:34]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:34]       1,884,535 occlusion rays        4.54 rays/pixel
+[13:09:34]       1,870,925 shading rays          4.51 rays/pixel
+[13:09:34]       7,511,304 total rays           18.11 rays/pixel
+[13:09:34] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:34]                       In Cache  Faults    Generated    Item Size
+[13:09:34]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:34] 	1 non-RAT image conversions using 1.46 MB
+[13:09:34] Frame Wall Clock Time: 0:00:03.04
+[13:09:34] Total Wall Clock Time: 0:00:03.51
+[13:09:34]        Total CPU Time: 0:00:11.17
+[13:09:34]  System CPU Time Only: 0:00:01.49
+[13:09:34]     Peak Memory Usage: 688.96 MB
+[13:09:34]     page rclm : 318346	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12680
+    switch ctx: 4106	  ictx: 1250323
+
+[13:09:34] Removed checkpoint file /render/yioannidis/testSim/render/test_0013.exr.mantra_checkpoint upon completion of render.
+[13:09:34] Loading IFD from /render/yioannidis/testSim/savedifds/test_0017.ifd
+[13:09:34] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:34] Registering procedural 'alembic': <built-in>
+[13:09:34] Registering procedural 'packed': <built-in>
+[13:09:34] Registering procedural 'sprite': <built-in>
+[13:09:34] Registering procedural 'image3d': <built-in>
+[13:09:34] Registering procedural 'file': <built-in>
+[13:09:34] Registering procedural 'fur': <built-in>
+[13:09:34] Registering procedural 'program': <built-in>
+[13:09:34] Registering procedural 'image3dvolume': <built-in>
+[13:09:34] Registering procedural 'vexvolume': <built-in>
+[13:09:34] Peak Geometry Objects: 5
+[13:09:34] Registering procedural 'ptinstance': <built-in>
+[13:09:34] Registering procedural 'ptreplicate': <built-in>
+[13:09:34] Registering procedural 'agent': <built-in>
+[13:09:34] Loading IFD from /render/yioannidis/testSim/savedifds/test_0018.ifd
+[13:09:34] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:34] Registering procedural 'alembic': <built-in>
+[13:09:34] Registering procedural 'packed': <built-in>
+[13:09:34] Registering procedural 'sprite': <built-in>
+[13:09:34] Registering procedural 'image3d': <built-in>
+[13:09:34] Registering procedural 'file': <built-in>
+[13:09:34] Registering procedural 'fur': <built-in>
+[13:09:34] Registering procedural 'program': <built-in>
+[13:09:34] Registering procedural 'image3dvolume': <built-in>
+[13:09:34] Registering procedural 'vexvolume': <built-in>
+[13:09:34] Registering procedural 'ptinstance': <built-in>
+[13:09:34] Registering procedural 'ptreplicate': <built-in>
+[13:09:34] Registering procedural 'agent': <built-in>
+[13:09:34] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:34] User defined global attribute 'global:fps' 'real'[1]
+[13:09:34]   reading geometry from stdin
+[13:09:34] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:34]   reading geometry from stdin
+[13:09:34] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:34] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:34] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:34] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:34] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:34] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:34] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:34] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:34] Generating Image: /render/yioannidis/testSim/render/test_0017.exr (720x576)
+[13:09:34]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:34]     SampleFilter: alpha
+[13:09:34]     PixelFilter:  gaussian -w 2
+[13:09:34]     VEX Type:     vector4
+[13:09:34]     Gamma:        1
+[13:09:34]     Dither:       0.5
+[13:09:34]     Gain:         1
+[13:09:34]     White point:  1
+[13:09:34] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:34] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0017.exr.mantra_checkpoint
+[13:09:34] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:34] User defined global attribute 'global:fps' 'real'[1]
+[13:09:34] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0017.bgeo
+[13:09:34] Threading Efficiency: 1871.63%
+[13:09:34] Ray Counts:
+[13:09:34]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:34]       1,856,075 occlusion rays        4.48 rays/pixel
+[13:09:34]       1,831,558 shading rays          4.42 rays/pixel
+[13:09:34]       7,443,477 total rays           17.95 rays/pixel
+[13:09:34] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:34]                       In Cache  Faults    Generated    Item Size
+[13:09:34]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:34] 	1 non-RAT image conversions using 1.46 MB
+[13:09:34] Frame Wall Clock Time: 0:00:02.49
+[13:09:34] Total Wall Clock Time: 0:00:03.00
+[13:09:34]        Total CPU Time: 0:00:09.99
+[13:09:34]  System CPU Time Only: 0:00:00.84
+[13:09:34]     Peak Memory Usage: 684.96 MB
+[13:09:34]     page rclm : 318663	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12608
+    switch ctx: 4802	  ictx: 4000
+
+Load Time: Frame Wall Clock Time: 0:00:00.52
+Total Wall Clock Time: 0:00:00.52
+       Total CPU Time: 0:00:01.14
+ System CPU Time Only: 0:00:00.57
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292451	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 56
+    switch ctx: 1686	  ictx: 473
+[13:09:34] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:34] 
+[13:09:34] Thread Count: 20
+[13:09:34] Removed checkpoint file /render/yioannidis/testSim/render/test_0005.exr.mantra_checkpoint upon completion of render.
+[13:09:34] Peak Geometry Objects: 5
+[13:09:35] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:35] User defined global attribute 'global:fps' 'real'[1]
+[13:09:35]   reading geometry from stdin
+[13:09:35] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:35]   reading geometry from stdin
+[13:09:35] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:35] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:35] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:35] Generating Image: /render/yioannidis/testSim/render/test_0018.exr (720x576)
+[13:09:35]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:35]     SampleFilter: alpha
+[13:09:35]     PixelFilter:  gaussian -w 2
+[13:09:35]     VEX Type:     vector4
+[13:09:35]     Gamma:        1
+[13:09:35]     Dither:       0.5
+[13:09:35]     Gain:         1
+[13:09:35]     White point:  1
+[13:09:35] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0018.exr.mantra_checkpoint
+[13:09:35] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:35] User defined global attribute 'global:fps' 'real'[1]
+[13:09:35] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0018.bgeo
+[13:09:35] Threading Efficiency: 1942.66%
+[13:09:35] Ray Counts:
+[13:09:35]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:35]       1,861,322 occlusion rays        4.49 rays/pixel
+[13:09:35]       1,839,055 shading rays          4.43 rays/pixel
+[13:09:35]       7,456,221 total rays           17.98 rays/pixel
+[13:09:35] Unified Cache: 33.21 KB of 31.53 GB used
+[13:09:35]                       In Cache  Faults    Generated    Item Size
+[13:09:35]       Procedural:     33.21 KB       1     33.21 KB     33.21 KB
+[13:09:35] 	1 non-RAT image conversions using 1.46 MB
+[13:09:35] Frame Wall Clock Time: 0:00:02.66
+[13:09:35] Total Wall Clock Time: 0:00:03.20
+[13:09:35]        Total CPU Time: 0:00:10.35
+[13:09:35]  System CPU Time Only: 0:00:01.07
+[13:09:35]     Peak Memory Usage: 679.46 MB
+[13:09:35]     page rclm : 318071	  flts: 0
+    # swaps   : 0
+    blocks in : 48	   out: 12616
+    switch ctx: 5189	  ictx: 124010
+
+Load Time: Frame Wall Clock Time: 0:00:00.48
+Total Wall Clock Time: 0:00:00.48
+       Total CPU Time: 0:00:01.13
+ System CPU Time Only: 0:00:00.56
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292379	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1693	  ictx: 570
+[13:09:35] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:35] 
+[13:09:35] Removed checkpoint file /render/yioannidis/testSim/render/test_0009.exr.mantra_checkpoint upon completion of render.
+[13:09:35] Thread Count: 20
+[13:09:35] Loading IFD from /render/yioannidis/testSim/savedifds/test_0019.ifd
+[13:09:35] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:35] Registering procedural 'alembic': <built-in>
+[13:09:35] Registering procedural 'packed': <built-in>
+[13:09:35] Registering procedural 'sprite': <built-in>
+[13:09:35] Registering procedural 'image3d': <built-in>
+[13:09:35] Registering procedural 'file': <built-in>
+[13:09:35] Registering procedural 'fur': <built-in>
+[13:09:35] Registering procedural 'program': <built-in>
+[13:09:35] Registering procedural 'image3dvolume': <built-in>
+[13:09:35] Registering procedural 'vexvolume': <built-in>
+[13:09:35] Registering procedural 'ptinstance': <built-in>
+[13:09:35] Registering procedural 'ptreplicate': <built-in>
+[13:09:35] Registering procedural 'agent': <built-in>
+[13:09:35] Peak Geometry Objects: 5
+[13:09:35] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:35] User defined global attribute 'global:fps' 'real'[1]
+[13:09:35]   reading geometry from stdin
+[13:09:35] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:35]   reading geometry from stdin
+[13:09:35] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:35] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:35] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:35] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:35] Generating Image: /render/yioannidis/testSim/render/test_0019.exr (720x576)
+[13:09:35]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:35]     SampleFilter: alpha
+[13:09:35]     PixelFilter:  gaussian -w 2
+[13:09:35]     VEX Type:     vector4
+[13:09:35]     Gamma:        1
+[13:09:35]     Dither:       0.5
+[13:09:35]     Gain:         1
+[13:09:35]     White point:  1
+[13:09:35] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0019.exr.mantra_checkpoint
+[13:09:35] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:35] User defined global attribute 'global:fps' 'real'[1]
+[13:09:35] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0019.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.45
+Total Wall Clock Time: 0:00:00.45
+       Total CPU Time: 0:00:01.13
+ System CPU Time Only: 0:00:00.58
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292368	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1684	  ictx: 668
+[13:09:35] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:35] 
+[13:09:35] Thread Count: 20
+[13:09:35] Loading IFD from /render/yioannidis/testSim/savedifds/test_0020.ifd
+[13:09:35] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:35] Registering procedural 'alembic': <built-in>
+[13:09:35] Registering procedural 'packed': <built-in>
+[13:09:35] Registering procedural 'sprite': <built-in>
+[13:09:35] Registering procedural 'image3d': <built-in>
+[13:09:35] Registering procedural 'file': <built-in>
+[13:09:35] Registering procedural 'fur': <built-in>
+[13:09:35] Registering procedural 'program': <built-in>
+[13:09:35] Registering procedural 'image3dvolume': <built-in>
+[13:09:35] Registering procedural 'vexvolume': <built-in>
+[13:09:35] Registering procedural 'ptinstance': <built-in>
+[13:09:35] Registering procedural 'ptreplicate': <built-in>
+[13:09:35] Registering procedural 'agent': <built-in>
+[13:09:35] Loading IFD from /render/yioannidis/testSim/savedifds/test_0015.ifd
+[13:09:35] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:35] Registering procedural 'alembic': <built-in>
+[13:09:35] Registering procedural 'packed': <built-in>
+[13:09:35] Registering procedural 'sprite': <built-in>
+[13:09:35] Registering procedural 'image3d': <built-in>
+[13:09:35] Registering procedural 'file': <built-in>
+[13:09:35] Registering procedural 'fur': <built-in>
+[13:09:35] Registering procedural 'program': <built-in>
+[13:09:35] Registering procedural 'image3dvolume': <built-in>
+[13:09:35] Registering procedural 'vexvolume': <built-in>
+[13:09:35] Registering procedural 'ptinstance': <built-in>
+[13:09:35] Registering procedural 'ptreplicate': <built-in>
+[13:09:35] Registering procedural 'agent': <built-in>
+[13:09:36] Loading IFD from /render/yioannidis/testSim/savedifds/test_0021.ifd
+[13:09:36] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:36] Registering procedural 'alembic': <built-in>
+[13:09:36] Registering procedural 'packed': <built-in>
+[13:09:36] Registering procedural 'sprite': <built-in>
+[13:09:36] Registering procedural 'image3d': <built-in>
+[13:09:36] Registering procedural 'file': <built-in>
+[13:09:36] Registering procedural 'fur': <built-in>
+[13:09:36] Registering procedural 'program': <built-in>
+[13:09:36] Registering procedural 'image3dvolume': <built-in>
+[13:09:36] Registering procedural 'vexvolume': <built-in>
+[13:09:36] Registering procedural 'ptinstance': <built-in>
+[13:09:36] Registering procedural 'ptreplicate': <built-in>
+[13:09:36] Registering procedural 'agent': <built-in>
+[13:09:36] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:36] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:36] Generating Image: /render/yioannidis/testSim/render/test_0020.exr (720x576)
+[13:09:36]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:36]     SampleFilter: alpha
+[13:09:36]     PixelFilter:  gaussian -w 2
+[13:09:36]     VEX Type:     vector4
+[13:09:36]     Gamma:        1
+[13:09:36]     Dither:       0.5
+[13:09:36]     Gain:         1
+[13:09:36]     White point:  1
+[13:09:36] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:36] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0020.exr.mantra_checkpoint
+[13:09:36] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0020.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.50
+Total Wall Clock Time: 0:00:00.50
+       Total CPU Time: 0:00:01.13
+ System CPU Time Only: 0:00:00.57
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292364	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1709	  ictx: 194
+[13:09:36] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:36] 
+[13:09:36] Thread Count: 20
+[13:09:36] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:36] Loading IFD from /render/yioannidis/testSim/savedifds/test_0022.ifd
+[13:09:36] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:36] Registering procedural 'alembic': <built-in>
+[13:09:36] Registering procedural 'packed': <built-in>
+[13:09:36] Registering procedural 'sprite': <built-in>
+[13:09:36] Registering procedural 'image3d': <built-in>
+[13:09:36] Registering procedural 'file': <built-in>
+[13:09:36] Registering procedural 'fur': <built-in>
+[13:09:36] Registering procedural 'program': <built-in>
+[13:09:36] Registering procedural 'image3dvolume': <built-in>
+[13:09:36] Registering procedural 'vexvolume': <built-in>
+[13:09:36] Registering procedural 'ptinstance': <built-in>
+[13:09:36] Registering procedural 'ptreplicate': <built-in>
+[13:09:36] Registering procedural 'agent': <built-in>
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:36] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:36] Generating Image: /render/yioannidis/testSim/render/test_0015.exr (720x576)
+[13:09:36]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:36]     SampleFilter: alpha
+[13:09:36]     PixelFilter:  gaussian -w 2
+[13:09:36]     VEX Type:     vector4
+[13:09:36]     Gamma:        1
+[13:09:36]     Dither:       0.5
+[13:09:36]     Gain:         1
+[13:09:36]     White point:  1
+[13:09:36] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0015.exr.mantra_checkpoint
+[13:09:36] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0015.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.49
+Total Wall Clock Time: 0:00:00.49
+       Total CPU Time: 0:00:01.08
+ System CPU Time Only: 0:00:00.52
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292460	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 48
+    switch ctx: 1700	  ictx: 80
+[13:09:36] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:36] 
+[13:09:36] Thread Count: 20
+[13:09:36] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:36] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:36] Generating Image: /render/yioannidis/testSim/render/test_0021.exr (720x576)
+[13:09:36]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:36]     SampleFilter: alpha
+[13:09:36]     PixelFilter:  gaussian -w 2
+[13:09:36]     VEX Type:     vector4
+[13:09:36]     Gamma:        1
+[13:09:36]     Dither:       0.5
+[13:09:36]     Gain:         1
+[13:09:36]     White point:  1
+[13:09:36] Threading Efficiency: 1874.54%
+[13:09:36] Ray Counts:
+[13:09:36]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:36]       1,886,435 occlusion rays        4.55 rays/pixel
+[13:09:36]       1,870,981 shading rays          4.51 rays/pixel
+[13:09:36]       7,513,260 total rays           18.12 rays/pixel
+[13:09:36] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:36]                       In Cache  Faults    Generated    Item Size
+[13:09:36]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:36] 	1 non-RAT image conversions using 1.46 MB
+[13:09:36] Frame Wall Clock Time: 0:00:02.68
+[13:09:36] Total Wall Clock Time: 0:00:03.14
+[13:09:36]        Total CPU Time: 0:00:10.88
+[13:09:36]  System CPU Time Only: 0:00:01.22
+[13:09:36]     Peak Memory Usage: 684.96 MB
+[13:09:36]     page rclm : 317498	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12672
+    switch ctx: 4417	  ictx: 304915
+
+[13:09:36] Removed checkpoint file /render/yioannidis/testSim/render/test_0014.exr.mantra_checkpoint upon completion of render.
+[13:09:36] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0021.exr.mantra_checkpoint
+[13:09:36] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0021.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.57
+Total Wall Clock Time: 0:00:00.57
+       Total CPU Time: 0:00:01.09
+ System CPU Time Only: 0:00:00.53
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292451	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1702	  ictx: 420
+[13:09:36] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:36] 
+[13:09:36] Thread Count: 20
+[13:09:36] Peak Geometry Objects: 5
+[13:09:36] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:36]   reading geometry from stdin
+[13:09:36] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:36] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:36] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:36] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:36] Generating Image: /render/yioannidis/testSim/render/test_0022.exr (720x576)
+[13:09:36]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:36]     SampleFilter: alpha
+[13:09:36]     PixelFilter:  gaussian -w 2
+[13:09:36]     VEX Type:     vector4
+[13:09:36]     Gamma:        1
+[13:09:36]     Dither:       0.5
+[13:09:36]     Gain:         1
+[13:09:36]     White point:  1
+[13:09:36] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0022.exr.mantra_checkpoint
+[13:09:36] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:36] User defined global attribute 'global:fps' 'real'[1]
+[13:09:36] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0022.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.63
+Total Wall Clock Time: 0:00:00.63
+       Total CPU Time: 0:00:01.10
+ System CPU Time Only: 0:00:00.53
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292458	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 48
+    switch ctx: 1692	  ictx: 320
+[13:09:37] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:37] 
+[13:09:37] Thread Count: 20
+[13:09:37] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:37] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:37] Threading Efficiency: 1928.19%
+[13:09:37] Ray Counts:
+[13:09:37]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:37]       1,884,608 occlusion rays        4.54 rays/pixel
+[13:09:37]       1,869,319 shading rays          4.51 rays/pixel
+[13:09:37]       7,509,771 total rays           18.11 rays/pixel
+[13:09:37] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:37]                       In Cache  Faults    Generated    Item Size
+[13:09:37]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:37] 	1 non-RAT image conversions using 1.46 MB
+[13:09:37] Frame Wall Clock Time: 0:00:02.84
+[13:09:37] Total Wall Clock Time: 0:00:03.35
+[13:09:37]        Total CPU Time: 0:00:10.46
+[13:09:37]  System CPU Time Only: 0:00:00.87
+[13:09:37]     Peak Memory Usage: 684.96 MB
+[13:09:37]     page rclm : 316146	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12712
+    switch ctx: 4913	  ictx: 11575
+
+[13:09:37] Removed checkpoint file /render/yioannidis/testSim/render/test_0017.exr.mantra_checkpoint upon completion of render.
+[13:09:37] Peak Geometry Objects: 5
+[13:09:37] Threading Efficiency: 1957.15%
+[13:09:37] Ray Counts:
+[13:09:37]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:37]       1,886,673 occlusion rays        4.55 rays/pixel
+[13:09:37]       1,872,831 shading rays          4.52 rays/pixel
+[13:09:37]       7,515,348 total rays           18.12 rays/pixel
+[13:09:37] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:37]                       In Cache  Faults    Generated    Item Size
+[13:09:37]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:37] 	1 non-RAT image conversions using 1.46 MB
+[13:09:37] Frame Wall Clock Time: 0:00:02.82
+[13:09:37] Total Wall Clock Time: 0:00:03.30
+[13:09:37]        Total CPU Time: 0:00:10.52
+[13:09:37]  System CPU Time Only: 0:00:00.91
+[13:09:37]     Peak Memory Usage: 700.96 MB
+[13:09:37]     page rclm : 316786	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12672
+    switch ctx: 5915	  ictx: 9329
+
+[13:09:37] Removed checkpoint file /render/yioannidis/testSim/render/test_0018.exr.mantra_checkpoint upon completion of render.
+[13:09:37] Loading IFD from /render/yioannidis/testSim/savedifds/test_0023.ifd
+[13:09:37] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:37] Registering procedural 'alembic': <built-in>
+[13:09:37] Registering procedural 'packed': <built-in>
+[13:09:37] Registering procedural 'sprite': <built-in>
+[13:09:37] Registering procedural 'image3d': <built-in>
+[13:09:37] Registering procedural 'file': <built-in>
+[13:09:37] Registering procedural 'fur': <built-in>
+[13:09:37] Registering procedural 'program': <built-in>
+[13:09:37] Registering procedural 'image3dvolume': <built-in>
+[13:09:37] Registering procedural 'vexvolume': <built-in>
+[13:09:37] Registering procedural 'ptinstance': <built-in>
+[13:09:37] Registering procedural 'ptreplicate': <built-in>
+[13:09:37] Registering procedural 'agent': <built-in>
+[13:09:38] Peak Geometry Objects: 5
+[13:09:38] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:38] Loading IFD from /render/yioannidis/testSim/savedifds/test_0024.ifd
+[13:09:38] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:38] Registering procedural 'alembic': <built-in>
+[13:09:38] Registering procedural 'packed': <built-in>
+[13:09:38] Registering procedural 'sprite': <built-in>
+[13:09:38] Registering procedural 'image3d': <built-in>
+[13:09:38] Registering procedural 'file': <built-in>
+[13:09:38] Registering procedural 'fur': <built-in>
+[13:09:38] Registering procedural 'program': <built-in>
+[13:09:38] Registering procedural 'image3dvolume': <built-in>
+[13:09:38] Registering procedural 'vexvolume': <built-in>
+[13:09:38] Registering procedural 'ptinstance': <built-in>
+[13:09:38] Registering procedural 'ptreplicate': <built-in>
+[13:09:38] Registering procedural 'agent': <built-in>
+[13:09:38] Loading IFD from /render/yioannidis/testSim/savedifds/test_0016.ifd
+[13:09:38] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:38] Registering procedural 'alembic': <built-in>
+[13:09:38] Registering procedural 'packed': <built-in>
+[13:09:38] Registering procedural 'sprite': <built-in>
+[13:09:38] Registering procedural 'image3d': <built-in>
+[13:09:38] Registering procedural 'file': <built-in>
+[13:09:38] Registering procedural 'fur': <built-in>
+[13:09:38] Registering procedural 'program': <built-in>
+[13:09:38] Registering procedural 'image3dvolume': <built-in>
+[13:09:38] Registering procedural 'vexvolume': <built-in>
+[13:09:38] Registering procedural 'ptinstance': <built-in>
+[13:09:38] Registering procedural 'ptreplicate': <built-in>
+[13:09:38] Registering procedural 'agent': <built-in>
+[13:09:38] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:38] User defined global attribute 'global:fps' 'real'[1]
+[13:09:38]   reading geometry from stdin
+[13:09:38] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:38]   reading geometry from stdin
+[13:09:38] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:38] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:38] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:38] Generating Image: /render/yioannidis/testSim/render/test_0023.exr (720x576)
+[13:09:38]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:38]     SampleFilter: alpha
+[13:09:38]     PixelFilter:  gaussian -w 2
+[13:09:38]     VEX Type:     vector4
+[13:09:38]     Gamma:        1
+[13:09:38]     Dither:       0.5
+[13:09:38]     Gain:         1
+[13:09:38]     White point:  1
+[13:09:38] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0023.exr.mantra_checkpoint
+[13:09:38] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:38] User defined global attribute 'global:fps' 'real'[1]
+[13:09:38] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0023.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.60
+Total Wall Clock Time: 0:00:00.60
+       Total CPU Time: 0:00:01.12
+ System CPU Time Only: 0:00:00.56
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292364	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 32
+    switch ctx: 1692	  ictx: 720
+[13:09:38] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:38] 
+[13:09:38] Thread Count: 20
+[13:09:38] Threading Efficiency: 1870.25%
+[13:09:38] Ray Counts:
+[13:09:38]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:38]       1,888,125 occlusion rays        4.55 rays/pixel
+[13:09:38]       1,875,978 shading rays          4.52 rays/pixel
+[13:09:38]       7,519,947 total rays           18.13 rays/pixel
+[13:09:38] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:38]                       In Cache  Faults    Generated    Item Size
+[13:09:38]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:38] 	1 non-RAT image conversions using 1.46 MB
+[13:09:38] Frame Wall Clock Time: 0:00:03.13
+[13:09:38] Total Wall Clock Time: 0:00:03.58
+[13:09:38]        Total CPU Time: 0:00:10.80
+[13:09:38]  System CPU Time Only: 0:00:01.03
+[13:09:38]     Peak Memory Usage: 704.96 MB
+[13:09:38]     page rclm : 316982	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12672
+    switch ctx: 5131	  ictx: 82922
+
+[13:09:38] Removed checkpoint file /render/yioannidis/testSim/render/test_0019.exr.mantra_checkpoint upon completion of render.
+[13:09:38] Peak Geometry Objects: 5
+[13:09:38] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:38] User defined global attribute 'global:fps' 'real'[1]
+[13:09:38]   reading geometry from stdin
+[13:09:38] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:38]   reading geometry from stdin
+[13:09:38] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:38] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:38] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:38] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:38] Generating Image: /render/yioannidis/testSim/render/test_0024.exr (720x576)
+[13:09:38]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:38]     SampleFilter: alpha
+[13:09:38]     PixelFilter:  gaussian -w 2
+[13:09:38]     VEX Type:     vector4
+[13:09:38]     Gamma:        1
+[13:09:38]     Dither:       0.5
+[13:09:38]     Gain:         1
+[13:09:38]     White point:  1
+[13:09:38] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0024.exr.mantra_checkpoint
+[13:09:38] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:38] User defined global attribute 'global:fps' 'real'[1]
+[13:09:38] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0024.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.59
+Total Wall Clock Time: 0:00:00.59
+       Total CPU Time: 0:00:01.13
+ System CPU Time Only: 0:00:00.56
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292366	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1722	  ictx: 413
+[13:09:38] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:38] 
+[13:09:38] Thread Count: 20
+[13:09:39] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:39] User defined global attribute 'global:fps' 'real'[1]
+[13:09:39]   reading geometry from stdin
+[13:09:39] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:39]   reading geometry from stdin
+[13:09:39] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:39] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:39] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:39] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:39] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:39] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:39] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:39] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:39] Generating Image: /render/yioannidis/testSim/render/test_0016.exr (720x576)
+[13:09:39]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:39]     SampleFilter: alpha
+[13:09:39]     PixelFilter:  gaussian -w 2
+[13:09:39]     VEX Type:     vector4
+[13:09:39]     Gamma:        1
+[13:09:39]     Dither:       0.5
+[13:09:39]     Gain:         1
+[13:09:39]     White point:  1
+[13:09:39] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0016.exr.mantra_checkpoint
+[13:09:39] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:39] User defined global attribute 'global:fps' 'real'[1]
+[13:09:39] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0016.bgeo
+Load Time: Frame Wall Clock Time: 0:00:00.63
+Total Wall Clock Time: 0:00:00.63
+       Total CPU Time: 0:00:01.15
+ System CPU Time Only: 0:00:00.59
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292490	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1704	  ictx: 513
+[13:09:39] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:39] 
+[13:09:39] Thread Count: 20
+[13:09:39] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:39] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:39] Threading Efficiency: 1810.70%
+[13:09:39] Ray Counts:
+[13:09:39]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:39]       1,890,492 occlusion rays        4.56 rays/pixel
+[13:09:39]       1,877,593 shading rays          4.53 rays/pixel
+[13:09:39]       7,523,929 total rays           18.14 rays/pixel
+[13:09:39] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:39]                       In Cache  Faults    Generated    Item Size
+[13:09:39]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:39] 	1 non-RAT image conversions using 1.46 MB
+[13:09:39] Frame Wall Clock Time: 0:00:03.65
+[13:09:39] Total Wall Clock Time: 0:00:04.15
+[13:09:39]        Total CPU Time: 0:00:10.93
+[13:09:39]  System CPU Time Only: 0:00:01.11
+[13:09:39]     Peak Memory Usage: 708.96 MB
+[13:09:39]     page rclm : 321005	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12672
+    switch ctx: 4151	  ictx: 225460
+
+[13:09:39] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:39] Removed checkpoint file /render/yioannidis/testSim/render/test_0020.exr.mantra_checkpoint upon completion of render.
+[13:09:39] Threading Efficiency: 1835.64%
+[13:09:39] Ray Counts:
+[13:09:39]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:39]       1,885,740 occlusion rays        4.55 rays/pixel
+[13:09:39]       1,867,446 shading rays          4.50 rays/pixel
+[13:09:39]       7,509,030 total rays           18.11 rays/pixel
+[13:09:39] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:39]                       In Cache  Faults    Generated    Item Size
+[13:09:39]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:39] 	1 non-RAT image conversions using 1.46 MB
+[13:09:39] Frame Wall Clock Time: 0:00:03.50
+[13:09:39] Total Wall Clock Time: 0:00:04.00
+[13:09:39]        Total CPU Time: 0:00:10.97
+[13:09:39]  System CPU Time Only: 0:00:01.17
+[13:09:39]     Peak Memory Usage: 700.96 MB
+[13:09:39]     page rclm : 318720	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12664
+    switch ctx: 4197	  ictx: 488753
+
+[13:09:39] Removed checkpoint file /render/yioannidis/testSim/render/test_0015.exr.mantra_checkpoint upon completion of render.
+[13:09:40] Peak Geometry Objects: 5
+[13:09:40] Peak Geometry Objects: 5
+[13:09:40] Threading Efficiency: 1960.59%
+[13:09:40] Ray Counts:
+[13:09:40]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:40]       1,891,531 occlusion rays        4.56 rays/pixel
+[13:09:40]       1,881,280 shading rays          4.54 rays/pixel
+[13:09:40]       7,528,655 total rays           18.15 rays/pixel
+[13:09:40] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:40]                       In Cache  Faults    Generated    Item Size
+[13:09:40]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:40] 	1 non-RAT image conversions using 1.46 MB
+[13:09:40] Frame Wall Clock Time: 0:00:03.66
+[13:09:40] Total Wall Clock Time: 0:00:04.23
+[13:09:40]        Total CPU Time: 0:00:10.67
+[13:09:40]  System CPU Time Only: 0:00:00.89
+[13:09:40]     Peak Memory Usage: 704.96 MB
+[13:09:40]     page rclm : 319549	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12680
+    switch ctx: 5522	  ictx: 40863
+
+[13:09:40] Removed checkpoint file /render/yioannidis/testSim/render/test_0021.exr.mantra_checkpoint upon completion of render.
+[13:09:40] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:40] Peak Geometry Objects: 5
+[13:09:40] Threading Efficiency: 1850.51%
+[13:09:40] Ray Counts:
+[13:09:40]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:40]       1,890,793 occlusion rays        4.56 rays/pixel
+[13:09:40]       1,878,620 shading rays          4.53 rays/pixel
+[13:09:40]       7,525,257 total rays           18.15 rays/pixel
+[13:09:40] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:40]                       In Cache  Faults    Generated    Item Size
+[13:09:40]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:40] 	1 non-RAT image conversions using 1.46 MB
+[13:09:40] Frame Wall Clock Time: 0:00:03.73
+[13:09:40] Total Wall Clock Time: 0:00:04.35
+[13:09:40]        Total CPU Time: 0:00:11.13
+[13:09:40]  System CPU Time Only: 0:00:01.32
+[13:09:40]     Peak Memory Usage: 704.96 MB
+[13:09:40]     page rclm : 318128	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12680
+    switch ctx: 4585	  ictx: 612021
+
+[13:09:40] Removed checkpoint file /render/yioannidis/testSim/render/test_0022.exr.mantra_checkpoint upon completion of render.
+[13:09:40] Peak Geometry Objects: 5
+[13:09:41] Loading IFD from /render/yioannidis/testSim/savedifds/test_0025.ifd
+[13:09:41] Registering procedural 'engineinstance': mantra/VRAY_ProcEngine.so
+[13:09:41] Registering procedural 'alembic': <built-in>
+[13:09:41] Registering procedural 'packed': <built-in>
+[13:09:41] Registering procedural 'sprite': <built-in>
+[13:09:41] Registering procedural 'image3d': <built-in>
+[13:09:41] Registering procedural 'file': <built-in>
+[13:09:41] Registering procedural 'fur': <built-in>
+[13:09:41] Registering procedural 'program': <built-in>
+[13:09:41] Registering procedural 'image3dvolume': <built-in>
+[13:09:41] Registering procedural 'vexvolume': <built-in>
+[13:09:41] Registering procedural 'ptinstance': <built-in>
+[13:09:41] Registering procedural 'ptreplicate': <built-in>
+[13:09:41] Registering procedural 'agent': <built-in>
+[13:09:41] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:41] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:41] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:41] mantra Version 15.5.480 (Compiled on May 18 2016)
+[13:09:42] User defined global attribute 'global:fps' 'real'[1]
+[13:09:42]   reading geometry from stdin
+[13:09:42] /obj/groundplane_object1/import_groundplane (123 primitives)
+
+[13:09:42]   reading geometry from stdin
+[13:09:42] /obj/sphere_object1/switch1 (0 primitives)
+
+[13:09:42] User defined plane attribute 'IPlay.s3dleftplane' 'string'[1]
+[13:09:42] User defined plane attribute 'IPlay.s3drightplane' 'string'[1]
+[13:09:42] User defined plane attribute 'IPlay.rendermode' 'string'[1]
+[13:09:42] User defined plane attribute 'IPlay.framerange' 'string'[1]
+[13:09:42] User defined plane attribute 'IPlay.currentframe' 'real'[1]
+[13:09:42] User defined plane attribute 'IPlay.rendersource' 'string'[1]
+[13:09:42] User defined plane attribute 'IPlay.houdiniportnum' 'int'[1]
+[13:09:42] Generating Image: /render/yioannidis/testSim/render/test_0025.exr (720x576)
+[13:09:42]  Plane[C]: 0 Cf+Af[4] (16-bit float)
+[13:09:42]     SampleFilter: alpha
+[13:09:42]     PixelFilter:  gaussian -w 2
+[13:09:42]     VEX Type:     vector4
+[13:09:42]     Gamma:        1
+[13:09:42]     Dither:       0.5
+[13:09:42]     Gain:         1
+[13:09:42]     White point:  1
+[13:09:42] Will be writing to checkpoint file /render/yioannidis/testSim/render/test_0025.exr.mantra_checkpoint
+[13:09:42] User defined object attribute 'camera:shutter' 'real'[2]
+[13:09:42] User defined global attribute 'global:fps' 'real'[1]
+[13:09:42] file procedural: /obj/sphere_object1 loading geometry /render/yioannidis/testSim/geos_exported/cached.0025.bgeo
+[13:09:42] Threading Efficiency: 1906.40%
+[13:09:42] Ray Counts:
+[13:09:42]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:42]       1,890,787 occlusion rays        4.56 rays/pixel
+[13:09:42]       1,878,295 shading rays          4.53 rays/pixel
+[13:09:42]       7,524,926 total rays           18.14 rays/pixel
+[13:09:42] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:42]                       In Cache  Faults    Generated    Item Size
+[13:09:42]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:42] 	1 non-RAT image conversions using 1.46 MB
+[13:09:42] Frame Wall Clock Time: 0:00:03.49
+[13:09:42] Total Wall Clock Time: 0:00:04.08
+[13:09:42]        Total CPU Time: 0:00:11.11
+[13:09:42]  System CPU Time Only: 0:00:01.03
+[13:09:42]     Peak Memory Usage: 724.96 MB
+[13:09:42]     page rclm : 321254	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12680
+    switch ctx: 4491	  ictx: 90000
+
+[13:09:42] Removed checkpoint file /render/yioannidis/testSim/render/test_0023.exr.mantra_checkpoint upon completion of render.
+Load Time: Frame Wall Clock Time: 0:00:00.66
+Total Wall Clock Time: 0:00:00.66
+       Total CPU Time: 0:00:01.11
+ System CPU Time Only: 0:00:00.55
+    Peak Memory Usage: 74.80 MB
+    page rclm : 292451	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 40
+    switch ctx: 1648	  ictx: 121
+[13:09:42] VEX Shaders Loaded:
+  /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/mislighting.vfl
+  /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl /opt/software/hfs15.5.480/houdini/vex/Surface/pbrlighting.vfl
+               plastic opdef:/Shop/v_plastic::2.0
+
+[13:09:42] 
+[13:09:42] Thread Count: 20
+[13:09:42] Peak Geometry Objects: 5
+[13:09:42] Threading Efficiency: 1919.67%
+[13:09:42] Ray Counts:
+[13:09:42]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:42]       1,885,461 occlusion rays        4.55 rays/pixel
+[13:09:42]       1,868,355 shading rays          4.51 rays/pixel
+[13:09:42]       7,509,660 total rays           18.11 rays/pixel
+[13:09:42] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:42]                       In Cache  Faults    Generated    Item Size
+[13:09:42]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:42] 	1 non-RAT image conversions using 1.46 MB
+[13:09:42] Frame Wall Clock Time: 0:00:03.22
+[13:09:42] Total Wall Clock Time: 0:00:03.85
+[13:09:42]        Total CPU Time: 0:00:10.24
+[13:09:42]  System CPU Time Only: 0:00:00.84
+[13:09:42]     Peak Memory Usage: 696.96 MB
+[13:09:42]     page rclm : 316354	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12656
+    switch ctx: 5241	  ictx: 104154
+
+[13:09:42] Removed checkpoint file /render/yioannidis/testSim/render/test_0016.exr.mantra_checkpoint upon completion of render.
+[13:09:42] Threading Efficiency: 1884.50%
+[13:09:42] Ray Counts:
+[13:09:42]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:42]       1,892,732 occlusion rays        4.56 rays/pixel
+[13:09:42]       1,882,659 shading rays          4.54 rays/pixel
+[13:09:42]       7,531,235 total rays           18.16 rays/pixel
+[13:09:42] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:42]                       In Cache  Faults    Generated    Item Size
+[13:09:42]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:42] 	1 non-RAT image conversions using 1.46 MB
+[13:09:42] Frame Wall Clock Time: 0:00:03.38
+[13:09:42] Total Wall Clock Time: 0:00:03.97
+[13:09:42]        Total CPU Time: 0:00:10.83
+[13:09:42]  System CPU Time Only: 0:00:00.96
+[13:09:42]     Peak Memory Usage: 692.96 MB
+[13:09:42]     page rclm : 317471	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12680
+    switch ctx: 5161	  ictx: 82204
+
+[13:09:42] Removed checkpoint file /render/yioannidis/testSim/render/test_0024.exr.mantra_checkpoint upon completion of render.
+[13:09:42] Peak Geometry Objects: 5
+[13:09:42] Peak Geometry Objects: 5
+[13:09:43] Converting texture '/render/yioannidis/testSim/Hearts_Royals.jpg' to .rat format.  This uses approximately 1.46 MB of extra memory.
+[13:09:44] Threading Efficiency: 1960.22%
+[13:09:44] Ray Counts:
+[13:09:44]       3,755,844 primary rays          9.06 rays/pixel
+[13:09:44]       1,895,565 occlusion rays        4.57 rays/pixel
+[13:09:44]       1,885,011 shading rays          4.55 rays/pixel
+[13:09:44]       7,536,420 total rays           18.17 rays/pixel
+[13:09:44] Unified Cache: 109.25 KB of 31.53 GB used
+[13:09:44]                       In Cache  Faults    Generated    Item Size
+[13:09:44]       Procedural:    109.25 KB       1    109.25 KB    109.25 KB
+[13:09:44] 	1 non-RAT image conversions using 1.46 MB
+[13:09:44] Frame Wall Clock Time: 0:00:02.14
+[13:09:44] Total Wall Clock Time: 0:00:02.80
+[13:09:44]        Total CPU Time: 0:00:10.20
+[13:09:44]  System CPU Time Only: 0:00:00.98
+[13:09:44]     Peak Memory Usage: 676.96 MB
+[13:09:44]     page rclm : 316294	  flts: 0
+    # swaps   : 0
+    blocks in : 128	   out: 12680
+    switch ctx: 5981	  ictx: 814
+
+[13:09:44] Removed checkpoint file /render/yioannidis/testSim/render/test_0025.exr.mantra_checkpoint upon completion of render.
+[13:09:44] Peak Geometry Objects: 5

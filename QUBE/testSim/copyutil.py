@@ -66,13 +66,13 @@ import re
 import queryHip
 
 
-def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename):
+def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename, scenefileName):
 
     global prevFileSize, prevAccessTime, currentFileSize, currentAccessTime, prevDict, dictionary
 
     #Afer 60 secs re-execute copyCallback
     global t
-    t = threading.Timer(60.0, copyCallback, [username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename])
+    t = threading.Timer(60.0, copyCallback, [username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename, scenefileName])
 
     paramiko.util.log_to_file('/tmp/paramiko.log')
 
@@ -82,7 +82,7 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
     try:
             host='W10905'
 
-            ssh.connect(host, username='yanioaioan', password='12345678')
+            ssh.connect(host, username='yioannidis', password='12345678')
     except paramiko.SSHException:
             print "Connection Failed"
             quit()
@@ -93,13 +93,13 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
             print line.strip()
 
 
-    #print(os.path.isdir("/home/yanioaioan/"))
-    #print(os.path.exists("/home/yanioaioan/test.txt"))
+    #print(os.path.isdir("/home/yioannidis/"))
+    #print(os.path.exists("/home/yioannidis/test.txt"))
     '''
 
     # Open a transport
 
-    myhost = "192.168.56.101"#tete
+    myhost = "tete"#
 
     port = 22
     transport = paramiko.Transport((myhost, port))
@@ -127,7 +127,7 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
 
     # Upload files from local folder to renderfarm at first
-    #uploadAllFilesToSFTP("/home/yanioaioan/Desktop/myMayaSceneDir/", '/home/yanioaioan/myMayaSceneDir/', sftp, True)
+    #uploadAllFilesToSFTP("/home/yioannidis/Desktop/myMayaSceneDir/", '/home/yioannidis/myMayaSceneDir/', sftp, True)
 
     import subprocess
 
@@ -141,227 +141,240 @@ def copyCallback(username, password,localScene, remoteScene, farmOutputDir, copy
 
     #if log exists
     if exists(sftp,str(unicode(logfromFarmPath))):
-    ###subprocess.call("sftp "+username+str(myhost)+" <<< $'get "+str(logfromFarmPath)+" ./ '",shell=True)
-    #os.system("sftp "+"yanioaioan"+"@tete <<< $'mkdir "+"created""'")
+		###subprocess.call("sftp "+username+str(myhost)+" <<< $'get "+str(logfromFarmPath)+" ./ '",shell=True)
+		#os.system("sftp "+"yioannidis"+"@tete <<< $'mkdir "+"created""'")
+		#<<< ls testSim/logNew.txt && get testSim/logNew.txt
+		sftp.get(str(unicode(logfromFarmPath)), str(unicode(logtoLocalPath)))
+		log=os.stat("logTESTMANTRA.txt")
+		#if log not empty
+		if log:
+			#print 'log not there'
+			print 'Log found'
+			print log
 
-    #<<< ls testSim/logNew.txt && get testSim/logNew.txt
 
+			# list files' number in the output images directory
+			#directory="/home/yioannidis/"
+			#number_of_files = len([item for item in os.listdir(directory) if os.path.isfile(os.path.join(directory, item))])
 
+			files=sftp.listdir(unicode(farmOutputDir))
+			###files=subprocess.call("sftp "+username+"@tete"+" <<< $'ls "+str(farmOutputDir)+" ' | wc -l > filenumber2.txt",shell=True)
+
+			###files=os.popen("cat filenumber.txt").read()
+			###files=files.split()[0]
+
 
-        log=os.stat("logNew.txt")
+			print "files=%s"%(files)
 
+
 
-        #if log not empty
-        if log:
-            #print 'log not there'
-            print 'Log found'
-            print log
+			#sortedfiles = sorted(files)
 
+			#print "total number of files to be rendered="+str(len(sortedfiles))
+			#number_of_files=len(sortedfiles)
 
-            # list files' number in the output images directory
-            #directory="/home/yanioaioan/"
-            #number_of_files = len([item for item in os.listdir(directory) if os.path.isfile(os.path.join(directory, item))])
+			#Check if the directory that the rendered frames will be copied accross exist
+			if not os.path.exists(copyAccrossOutputDir):
+				os.mkdir(copyAccrossOutputDir)
+				print 'creating dir'+str(copyAccrossOutputDir)
 
-            files=sftp.listdir(unicode(farmOutputDir))
-            ###files=subprocess.call("sftp "+username+"@192.168.56.101"+" <<< $'ls "+str(farmOutputDir)+" ' | wc -l > filenumber2.txt",shell=True)
+			#list all file copied accross locally so far
+			copiedFiles = os.listdir(copyAccrossOutputDir)
+			print "total number of files copied across="+str(len(copiedFiles))
 
-            ###files=os.popen("cat filenumber.txt").read()
-            ###files=files.split()[0]
+			try:
 
+				filestat=sftp.stat(str(unicode(logfromFarmPath)))
+				#sftp.remove(str(unicode(logfromFarmPath)))
+				print 'log found on the farm, now time to copy accross'
 
-            print "files=%s"%(files)
+				#download log to monitor
+				#####sftp.get(str(unicode(logfromFarmPath)), str(unicode(logtoLocalPath)))
 
+				print "Fetch From.. "
+				print str(unicode(logfromFarmPath))
+				print "To.. "
+				print str(unicode(logtoLocalPath))
+				###subprocess.call("sftp "+username+"@"+"test.rebex.net"+" <<< $'get "+str(unicode(logfromFarmPath))+" "+str(unicode(logtoLocalPath))+"'",shell=True)
 
 
-            #sortedfiles = sorted(files)
+				print 'frameStart=%d'%int(frameStart)
+				print 'frameEnd=%d'%int(frameEnd)
 
-            #print "total number of files to be rendered="+str(len(sortedfiles))
-            #number_of_files=len(sortedfiles)
+				totalframestocopyaccross= int(frameEnd)-int(frameStart)+1
+				print 'totalframestocopyaccross=%d'%totalframestocopyaccross
+				print "len(copiedFiles)=%d"%len(copiedFiles)
+				print "int(totalframestocopyaccross)=%d"%(int(totalframestocopyaccross))
 
-            #Check if the directory that the rendered frames will be copied accross exist
-            if not os.path.exists(copyAccrossOutputDir):
-                os.mkdir(copyAccrossOutputDir)
-                print 'creating dir'+str(copyAccrossOutputDir)
+				if len(copiedFiles)<int(totalframestocopyaccross):
+					for i in range(int(frameStart),int(frameEnd)+1):
 
-            #list all file copied accross locally so far
-            copiedFiles = os.listdir(copyAccrossOutputDir)
-            print "total number of files copied across="+str(len(copiedFiles))
 
-            try:
+						#Now query the hip file
+						print localScene+str(scenefileName)
+						queriedframename,framePadding,frameExtension,framestartROP,frameEndROP,totalfiles = queryHip.queryHipFile(localScene+str(scenefileName))
+						formatPad=len(framePadding)
+						print'Hipnc Read'
+						
+						with open(logtoLocalPath,'r') as fin:
+								#output = fin.read()
+								#print output
+								for line in fin:
+									'''was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)'''
+									#line = re.findall("*\.tiff*", line)
 
-                filestat=sftp.stat(str(unicode(logfromFarmPath)))
-                #sftp.remove(str(unicode(logfromFarmPath)))
-                print 'log found on the farm, now time to copy accross'
 
-                #download log to monitor
-                #####sftp.get(str(unicode(logfromFarmPath)), str(unicode(logtoLocalPath)))
+									#line = re.findall('Mantra1.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
 
-                print "Fetch From.. "
-                print str(unicode(logfromFarmPath))
-                print "To.. "
-                print str(unicode(logtoLocalPath))
-                ###subprocess.call("sftp "+username+"@"+"test.rebex.net"+" <<< $'get "+str(unicode(logfromFarmPath))+" "+str(unicode(logtoLocalPath))+"'",shell=True)
+									#stringmatch=#frame %s (%s of %s.*).*%(i,i,frameEnd)
 
+									print "line=%s"%(line)
+									#line = "Rendering 10 frames"
 
-                print 'frameStart=%d'%int(frameStart)
-                print 'frameEnd=%d'%int(frameEnd)
+									#matchline = re.findall("Rendering\w+", line)
 
-                totalframestocopyaccross= int(frameEnd)-int(frameStart)+1
-                print 'totalframestocopyaccross=%d'%totalframestocopyaccross
-                print "len(copiedFiles)=%d"%len(copiedFiles)
-                print "int(totalframestocopyaccross)=%d"%(int(totalframestocopyaccross))
+									#print 'Test against=%s'%('mantra1 frame %d (%d of %d)'%(i,i,frameEndROP))
+									#print 'Test against=%s'%('mantra1 frame '+str(i))
+									
+									
+									
+									#print 'Test against=%s'%('Removed checkpoint file '+str(farmOutputDir)+str(framename))#+'_'+str(str(i).zfill(formatPad)))
+									#+'.*'+str(frameExtension)+'.*'+'mantra_checkpoint upon completion of render .*') 
+									
 
-                if len(copiedFiles)<int(totalframestocopyaccross):
-                    for i in range(int(frameStart),int(frameEnd)):
+									
+									#regexp = re.compile(r'mantra1 frame '+str(i)+'')
+									
+									
+									s='Removed checkpoint file '+str(farmOutputDir)+str(framename)
+									#NEED TO CHANGE /home to /render cause of server home area named /render instead of home
+									stringmatch= re.sub("/home", "/render", s)
+									print stringmatch
+									
+									print 'Test against: %s%s\.%s'%(stringmatch,str(str(i).zfill(formatPad)),str(frameExtension))
+																		
+									regexp = re.compile(r'%s%s\.%s'%(stringmatch,str(str(i).zfill(formatPad)),str(frameExtension)))
+									match=0
+									if regexp.search(line) is not None:
+									  print 'matched frame '+str(i)
+									  frameNumberMatched=i
+									  match=1
+									  
 
+									
 
-                        #Now query the hip file
-                        framename,framePadding,frameExtension,framestartROP,frameEndROP,totalfiles = queryHip.queryHipFile(localScene+"untitled.hipnc")
-                        formatPad=len(framePadding)
-                        print'Hipnc Read'
+									#print "line=%s"%line
+									#print "stringmatch=%s"%stringmatch
+									#print "matchline=%s"%matchline
 
-                        with open(logtoLocalPath,'r') as fin:
-                                #output = fin.read()
-                                #print output
-                                for line in fin:
-                                    '''was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)'''
-                                    #line = re.findall("*\.tiff*", line)
 
+									#a=raw_input("Press Enter to continue...")
 
-                                    #line = re.findall('Mantra1.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
 
-                                    #stringmatch=#frame %s (%s of %s.*).*%(i,i,frameEnd)
+									if match==1:
 
-                                    print "line=%s"%(line)
-                                    #line = "Rendering 10 frames"
+											print '..Copy remote file to local dir..'#imageFileName[2]#frame number
+											match=0
 
-                                    #matchline = re.findall("Rendering\w+", line)
+											print "************"
+											print
+											print "************"
 
-                                    #print 'Test against=%s'%('mantra1 frame %d (%d of %d)'%(i,i,frameEndROP))
-                                    print 'Test against=%s'%('mantra1 frame '+str(i))
+											print "filepath=%s"%(str(unicode(farmOutputDir))+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
+											print "localpath=%s"%(str(unicode(copyAccrossOutputDir))+'/'+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
+											
+											filepath = (str(unicode(farmOutputDir))+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
+											localpath = (str(unicode(copyAccrossOutputDir))+'/'+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
 
-                                    #regexp = re.compile(r'mantra1 frame %d \(%d of %d\)'%(i,i,frameEndROP))
-                                    regexp = re.compile(r'mantra1 frame '+str(i)+'')
-                                    match=0
-                                    if regexp.search(line) is not None:
-                                      print 'matched frame '+str(i)
-                                      frameNumberMatched=i
-                                      match=1
+											print "COPYING-->=%s"%(filepath)
+									
+											try:
+												#copy rendered frame accross
+												sftp.get(filepath, localpath)
 
+												# Delete file if sftp.get() has successfully finished copying
+												#sftp.remove(filepath)
+											except:
+												print "Copying frame %s failed for some reason, so we didn't remove it from the farm's home directory"
 
 
-                                    #print "line=%s"%line
-                                    #print "stringmatch=%s"%stringmatch
-                                    #print "matchline=%s"%matchline
 
+						'''
+						with open(logtoLocalPath) as fin:
+							for line in fin:
+								#was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)
+								#line = re.findall("*\.tiff*", line)
 
-                                    #a=raw_input("Press Enter to continue...")
 
+								line = re.findall('Successfully written image file.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
 
-                                    if match==1:
+								#Helpers usefull for maintenance
 
-                                            print '..Copy remote file to local dir..'#imageFileName[2]#frame number
-                                            match=0
+								#if line:
+								#   print "line="+str(line)
 
-                                            print "************"
-                                            print
-                                            print "************"
 
-                                            print "filepath=%s"%(str(unicode(farmOutputDir))+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
-                                            print "localpath=%s"%(str(unicode(copyAccrossOutputDir))+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
+								#if line found in the log, means we can safely copy accross
+								if line:
 
-                                            filepath = (str(unicode(farmOutputDir))+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
-                                            localpath = (str(unicode(copyAccrossOutputDir))+str(framename+str(str(i).zfill(formatPad))+"."+frameExtension))
+									#Helpers usefull for maintenance
 
-                                            print "COPYING-->=%s"%(filepath)
+									#print 'line='+str(line)+' found'
+									#it will raise an exception of file to copy across if not there
+									#filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
+									#print i
 
-                                            try:
-                                                #copy rendered frame accross
-                                                sftp.get(filepath, localpath)
 
-                                                # Delete file if sftp.get() has successfully finished copying
-                                                #sftp.remove(filepath)
-                                            except:
-                                                print "Copying frame %s failed for some reason, so we didn't remove it from the farm's home directory"
+									for filename in sortedfiles:
 
+										#Helpers usefull for maintenance
 
+										#filepath = str(unicode(farmOutputDir))+str(sortedfiles[i])
+										#filename = re.findall('myframe*%s.'%i, filename)
+										#print filename
+										#print framename
+										#old way of doing it
+										#filename = re.findall("%s\.0*%s\.[a-z]*" % (framename,i), filename)
+										#filename = re.findall(imageFileName[-1] , filename)
 
-                        '''
-                        with open(logtoLocalPath) as fin:
-                            for line in fin:
-                                #was working till Houdini 13....verbose hrendering does not support clear way of identifying if frames are complete (based on the logging)
-                                #line = re.findall("*\.tiff*", line)
 
+										imageFileName=line[0].split('/')#split and get the last element, which would be the string
 
-                                line = re.findall('Successfully written image file.*%s.*0*%s.*'%("test",i) , line)#works with maya 2016 - v-ray logging V-Ray Standalone EDU, version 3.10.01 for x64, V-Ray core version is 3.25.01
+										if filename:
 
-                                #Helpers usefull for maintenance
+											print "************"
+											print str(imageFileName[-1])+' imageFileNameStrippedoutof line regexpred\t<---'+str(line[0])
+											print "************"
+											print str(filename)+' found complete..and copied accross'
 
-                                #if line:
-                                #   print "line="+str(line)
+											filepath = str(unicode(farmOutputDir))+str(filename)
+											localpath = str(unicode(copyAccrossOutputDir))+str(username)+str("_")+str(filename)
 
+											try:
+												#copy rendered frame accross
+												sftp.get(filepath, localpath)
 
-                                #if line found in the log, means we can safely copy accross
-                                if line:
+												# Delete file if sftp.get() has successfully finished copying
+												sftp.remove(filepath)
+											except:
+												print "Copying frame %s failed for some reason, so we didn't remove it from the farm's home directory"
 
-                                    #Helpers usefull for maintenance
+						'''
+						#it will raise an exception of file to copy across is not there not there
+						#filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff"
+						# Download
+						#filepath = str(unicode(farmOutputDir))+str(sortedfiles[i]) #'/home/yioannidis/myHoudiniSceneDir/outputframes/frame0010.tiff'
+						#localpath = str(copyAccrossOutputDir)+str(username)+str(sortedfiles[i])
 
-                                    #print 'line='+str(line)+' found'
-                                    #it will raise an exception of file to copy across if not there
-                                    #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yanioaioan/myHoudiniSceneDir/outputframes/frame0010.tiff"
-                                    #print i
 
+				elif len(copiedFiles)>=int(totalframestocopyaccross):
+					#cancel the timer thread
+					t.cancel()
+					print 'All frames have been succesfully finished - copied accross'
+					exit()
 
-                                    for filename in sortedfiles:
-
-                                        #Helpers usefull for maintenance
-
-                                        #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i])
-                                        #filename = re.findall('myframe*%s.'%i, filename)
-                                        #print filename
-                                        #print framename
-                                        #old way of doing it
-                                        #filename = re.findall("%s\.0*%s\.[a-z]*" % (framename,i), filename)
-                                        #filename = re.findall(imageFileName[-1] , filename)
-
-
-                                        imageFileName=line[0].split('/')#split and get the last element, which would be the string
-
-                                        if filename:
-
-                                            print "************"
-                                            print str(imageFileName[-1])+' imageFileNameStrippedoutof line regexpred\t<---'+str(line[0])
-                                            print "************"
-                                            print str(filename)+' found complete..and copied accross'
-
-                                            filepath = str(unicode(farmOutputDir))+str(filename)
-                                            localpath = str(unicode(copyAccrossOutputDir))+str(username)+str("_")+str(filename)
-
-                                            try:
-                                                #copy rendered frame accross
-                                                sftp.get(filepath, localpath)
-
-                                                # Delete file if sftp.get() has successfully finished copying
-                                                sftp.remove(filepath)
-                                            except:
-                                                print "Copying frame %s failed for some reason, so we didn't remove it from the farm's home directory"
-
-                        '''
-                        #it will raise an exception of file to copy across is not there not there
-                        #filestat=sftp.stat(str(unicode(farmOutputDir))+str(sortedfiles[i])) #"/home/yanioaioan/myHoudiniSceneDir/outputframes/frame0010.tiff"
-                        # Download
-                        #filepath = str(unicode(farmOutputDir))+str(sortedfiles[i]) #'/home/yanioaioan/myHoudiniSceneDir/outputframes/frame0010.tiff'
-                        #localpath = str(copyAccrossOutputDir)+str(username)+str(sortedfiles[i])
-
-
-                elif len(copiedFiles)>=int(totalframestocopyaccross):
-                    #cancel the timer thread
-                    t.cancel()
-                    print 'All frames have been succesfully finished - copied accross'
-                    exit()
-
-            except:
-                print 'Please submit a Qube job so as for a logfile to be created first'
+			except:
+				print 'Please submit a Qube job so as for a logfile to be created first'
 
 
     sftp.close()
@@ -379,10 +392,10 @@ if __name__ == "__main__":
     #If needed to run from terminal with user interaction
     username = raw_input("Please enter username: ")
     password = getpass.getpass()#raw_input("Please enter password: ")
-    localScene = raw_input("Please enter full path to the local Scece directory to copy to renderfarm : ")#/home/yanioaioan/Desktop/myHoudiniSceneDir/
-    remoteScene = raw_input("Please enter full path to the remote Scece directory on the renderfarm :")#/home/yanioaioan/myHoudiniSceneDir/
-    farmOutputDir = raw_input("Please enter full path of the RenderFarm rendered output directory : ")#/home/yanioaioan/myHoudiniSceneDir/outputframes/
-    copyAccrossOutputDir = raw_input("Please enter full path of the desired output directory to copy across: ")#/home/yanioaioan/Desktop/myHoudiniSceneDir/outputframes/ or /transfer/outputframes/
+    localScene = raw_input("Please enter full path to the local Scece directory to copy to renderfarm : ")#/home/yioannidis/Desktop/myHoudiniSceneDir/
+    remoteScene = raw_input("Please enter full path to the remote Scece directory on the renderfarm :")#/home/yioannidis/myHoudiniSceneDir/
+    farmOutputDir = raw_input("Please enter full path of the RenderFarm rendered output directory : ")#/home/yioannidis/myHoudiniSceneDir/outputframes/
+    copyAccrossOutputDir = raw_input("Please enter full path of the desired output directory to copy across: ")#/home/yioannidis/Desktop/myHoudiniSceneDir/outputframes/ or /transfer/outputframes/
     frameStart = int(raw_input("Please enter the start of the framerange to be rendered: "))
     frameEnd = int(raw_input("Please enter the end of the framerange to be rendered: "))
     logfromFarmPath = raw_input("Please enter full path of the log file on the farm : ")
@@ -392,32 +405,33 @@ if __name__ == "__main__":
 
     #If needed to run directly
 
-    username ="yanioaioan"
-    password = "266592kR"
+    username ="yioannidis"
+    password = "peskandri2017!!"
     '''
-    localScene="/home/yanioaioan/Desktop/QUBE/myMayaSceneDir/"
-    remoteScene="/home/yanioaioan/myMayaSceneDir/"
-    farmOutputDir="/home/yanioaioan/myMayaSceneDir/textures/perspShape/"
-    copyAccrossOutputDir="/home/yanioaioan/Desktop/QUBE/myMayaSceneDir/textures/perspShape/"
+    localScene="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/"
+    remoteScene="/home/yioannidis/myMayaSceneDir/"
+    farmOutputDir="/home/yioannidis/myMayaSceneDir/textures/perspShape/"
+    copyAccrossOutputDir="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/perspShape/"
     frameStart="1"
     frameEnd="100"
-    logfromFarmPath="/home/yanioaioan/myMayaSceneDir/textures/logNew.txt"
-    logtoLocalPath="/home/yanioaioan/Desktop/QUBE/myMayaSceneDir/textures/logNew.txt"
+    logfromFarmPath="/home/yioannidis/myMayaSceneDir/textures/logNew.txt"
+    logtoLocalPath="/home/yioannidis/Desktop/QUBE/myMayaSceneDir/textures/logNew.txt"
     framename="test"
     '''
 
 
-    localScene="/home/yanioaioan/Desktop/QUBE/testSim/"
-    remoteScene="/home/yanioaioan/testSim/"
-    farmOutputDir="/home/yanioaioan/testSim/render/"
-    copyAccrossOutputDir="/home/yanioaioan/Desktop/QUBE/testSim/render/"
+    localScene="/home/yioannidis/Desktop/CopyutilPython/QubeFarmMonitorUtility/QUBE/testSim/"
+    remoteScene="/home/yioannidis/testSim/"
+    farmOutputDir="/home/yioannidis/testSim/render/"
+    copyAccrossOutputDir="/home/yioannidis/Desktop/CopyutilPython/QubeFarmMonitorUtility/QUBE/testSim/render"
     frameStart="1"
     frameEnd="25"
-    logfromFarmPath="/home/yanioaioan/testSim/logNew.txt"
-    logtoLocalPath="/home/yanioaioan/Desktop/QUBE/testSim/logNew.txt"
+    logfromFarmPath="/home/yioannidis/testSim/logTESTMANTRA.txt"
+    logtoLocalPath="/home/yioannidis/Desktop/CopyutilPython/QubeFarmMonitorUtility/QUBE/testSim/logTESTMANTRA.txt"
     framename="test_"
+    scenefileName="testSim.hipnc"
 
 
 
-    copyCallback(username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename)
+    copyCallback(username, password, localScene, remoteScene, farmOutputDir, copyAccrossOutputDir, frameStart, frameEnd, logfromFarmPath, logtoLocalPath, framename, scenefileName)
     

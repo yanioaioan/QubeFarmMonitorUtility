@@ -68,7 +68,7 @@ def queryHipFile(sceneFile):
 			#then we will use them to check how many have been edxported and how many are about to be copied back from server..
 			
 			# "(semicolon or a comma) followed by a space"
-                        pattern = re.compile(r"\.|_|-")
+			pattern = re.compile(r"\.|_|-")
 		
 			pattern.split(outputImagePathList[-1])
 			
@@ -89,4 +89,3 @@ def queryHipFile(sceneFile):
 			
 
     
-
